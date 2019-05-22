@@ -1,0 +1,371 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.HighAvailability" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_NLB_HEURISTIC_DRIVER_RUNNING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_NLB_HEURISTIC_DRIVER_RUNNING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_NLB_HEURISTIC_DRIVER_RUNNING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>High Availability</ComponentName>
+          <HeuristicId>2148401153</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.HighAvailability" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_NLB_HEURISTIC_STATE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_NLB_HEURISTIC_STATE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_NLB_HEURISTIC_STATE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>High Availability</ComponentName>
+          <HeuristicId>2148401155</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.HighAvailability" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_NLB_HEURISTIC_SVC_RUNNING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_NLB_HEURISTIC_SVC_RUNNING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_NLB_HEURISTIC_SVC_RUNNING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>High Availability</ComponentName>
+          <HeuristicId>2148401154</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.HighAvailability" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_NLB_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_NLB_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_NLB_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>High Availability</ComponentName>
+          <HeuristicId>2148401152</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- High Availability Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.HighAvailability.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.HighAvailability" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.HighAvailability.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.HighAvailability" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.HighAvailability.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.HighAvailability" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.HighAvailability.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.HighAvailability" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING">
+          <Name>NLB driver state</Name>
+          <Description>Services required for remote access servers to work as expected in the cluster are not running. Remote clients will not be able to connect to the internal network via this server.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING" SubElementID="RA_NLB_HEURISTIC_DRIVER_RUNNING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING" SubElementID="RA_NLB_HEURISTIC_DRIVER_RUNNING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING" SubElementID="RA_NLB_HEURISTIC_DRIVER_RUNNING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING_AlertMessageResourceID">
+          <Name>NLB driver unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE">
+          <Name>NLB state</Name>
+          <Description>The cluster state on this server is stopped, suspended, draining or converging.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE" SubElementID="RA_NLB_HEURISTIC_STATE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE" SubElementID="RA_NLB_HEURISTIC_STATE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE" SubElementID="RA_NLB_HEURISTIC_STATE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE_AlertMessageResourceID">
+          <Name>NLB Unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING">
+          <Name>NLB service state</Name>
+          <Description>Services required for remoteaccess to work as expected in the cluster are not running. Remote clients will not be able to connect to the internal network via this server.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING" SubElementID="RA_NLB_HEURISTIC_SVC_RUNNING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING" SubElementID="RA_NLB_HEURISTIC_SVC_RUNNING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING" SubElementID="RA_NLB_HEURISTIC_SVC_RUNNING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING_AlertMessageResourceID">
+          <Name>NLB service unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN">
+          <Name>Nlb Unknown error</Name>
+          <Description>An unknown error occured with NLB</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN" SubElementID="RA_NLB_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN" SubElementID="RA_NLB_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN" SubElementID="RA_NLB_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>NLB unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- High Availability Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.HighAvailability.AvailabilityRollup">
+          <Name>Direct Access Server from High Availability Availability Health Rollup</Name>
+          <Description>Direct Access Server from High Availability Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.HighAvailability.ConfigurationRollup">
+          <Name>Direct Access Server from HighAvailability Configuration Health Rollup</Name>
+          <Description>Direct Access Server from HighAvailability Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.HighAvailability.PerformanceRollup">
+          <Name>Direct Access Server from High Availability Performance Health Rollup</Name>
+          <Description>Direct Access Server from High Availability Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.HighAvailability.SecurityRollup">
+          <Name>Direct Access Server from High Availability Security Health Rollup</Name>
+          <Description>Direct Access Server from High Availability Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_DRIVER_RUNNING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Services required for server to work as expected in the cluster are not running. Remote clients will not be able to connect to the internal network via this server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. DirectAccess NLB drivers are not loaded or running.</maml:para>
+              <maml:para>2. DirectAccess NLB drivers stopped responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the service is running by typing 'Get-Service danlb' at a Windows PowerShell prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service danlb) or restart (Restart-Service danlb) the service from an elevated PowerShell prompt.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_SVC_RUNNING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Services required for server to work as expected in the cluster are not running. Remote clients will not be able to connect to the internal network via this server</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The NLB service has stopped.</maml:para>
+              <maml:para>2. The NLB service has stopped responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the service is running by typing 'Get-Service danlb' at a Windows PowerShell prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service danlb) or restart (Restart-Service danlb) the service from an elevated PowerShell prompt.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_STATE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The cluster state on this server is stopped, suspended, draining or converging.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>If the cluster state is stopped, draining, or suspended, the following might have occurred:</maml:para>
+              <maml:para>1. The IP-HTTPS and network location server certificates on the server do not match the certificates on the other cluster servers.</maml:para>
+              <maml:para>2. One or more DirectAccess settings were not configured successfully on this server.</maml:para>
+              <maml:para>3. NLB has been stopped manually on this server.</maml:para>
+              <maml:para>If the cluster state is converging, and has been for some time, either the external adapter on one of the cluster servers is disabled, or cluster settings do not match on all cluster servers.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>To retrieve information about NLB state, from the PowerShell prompt run:</maml:para>
+              <maml:para>Import-module remoteaccess</maml:para>
+              <maml:para>Get-RemoteAccessLoadBalancer</maml:para>
+              <maml:para>If the cluster state is stopped or draining or suspended, do the following:</maml:para>
+              <maml:para>1. If NLB has been stopped manually on this server, start it from NLB Manager.</maml:para>
+              <maml:para>2. Ensure that the IP-HTTPS and network location server certificates on this server match the certificates on the other cluster servers. If they do, at the command prompt, type gpupdate /force to update group policy on this server.</maml:para>
+              <maml:para>3. If the actions are not successful, remove the server from the cluster, and then re-add it.</maml:para>
+              <maml:para>If the cluster state is converging for some time</maml:para>
+              <maml:para>1. If the external adapter on one of the cluster servers is disabled, enable the adapter. Alternatively, to put the server in a stopped state, disable the internal adapter in addition to the external adapter.</maml:para>
+              <maml:para>2. If the external adapter on each cluster server is enabled, ensure that cluster settings match on all cluster servers.</maml:para>
+              <maml:para>3. If the actions are not successful, remove the server from the cluster, and then re-add it.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_NLB_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown NLB Error</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. The NLB service has stopped.</maml:para>
+              <maml:para>2. The NLB service has stopped responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>To retrieve information about NLB state, from the PowerShell prompt run:</maml:para>
+              <maml:para>Import-module remoteaccess</maml:para>
+              <maml:para>Get-RemoteAccessLoadBalancer</maml:para>
+              <maml:para>1. Ensure that the service is running by typing 'Get-Service danlb' at a Windows PowerShell prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service danlb) or restart (Restart-Service danlb) the service from an elevated PowerShell prompt.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

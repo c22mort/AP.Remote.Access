@@ -1,0 +1,67 @@
+<TemplateGroup>
+  <Instances>
+    <Instance ID="Instance3d5876a2e98b4569931758d52012d10f" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.Discovery" Version="1.0.0.0">
+      <DiscoveryConfig xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+        <Id>Discovery.RemoteAcessServer.Seed</Id>
+        <DisplayName>Remote Access Server Seed Discovery</DisplayName>
+        <Description>Remote Access Server Seed Discovery</Description>
+        <DataSourceId>DS</DataSourceId>
+        <DataSourceConfig>&lt;NameSpace&gt;\\$Target/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$\root\cimv2&lt;/NameSpace&gt;&lt;Query&gt;SELECT Name FROM Win32_ServerFeature WHERE ID = 468&lt;/Query&gt;&lt;Frequency&gt;18000&lt;/Frequency&gt;&lt;ClassId&gt;$MPElement[Name="AP.Remote.Access.Class.RemoteAccessServer.Seed"]$&lt;/ClassId&gt;&lt;InstanceSettings&gt;&lt;Settings&gt;&lt;Setting&gt;&lt;Name&gt;$MPElement[Name="Windows!Microsoft.Windows.Computer"]/PrincipalName$&lt;/Name&gt;&lt;Value&gt;$Target/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$&lt;/Value&gt;&lt;/Setting&gt;&lt;Setting&gt;&lt;Name&gt;$MPElement[Name="System!System.Entity"]/DisplayName$&lt;/Name&gt;&lt;Value&gt;RemoteAccessServer Seed&lt;/Value&gt;&lt;/Setting&gt;&lt;/Settings&gt;&lt;/InstanceSettings&gt;</DataSourceConfig>
+        <DataSourceRunAs />
+        <DataSourceType>Windows!Microsoft.Windows.WmiProviderWithClassSnapshotDataMapper</DataSourceType>
+        <Target>Windows!Microsoft.Windows.Server.Computer</Target>
+        <Enabled>true</Enabled>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <ConfirmDelivery>false</ConfirmDelivery>
+        <Category>Discovery</Category>
+        <DiscoveryClasses>
+          <DiscoveryClassItem>
+            <TypeId>AP.Remote.Access.Class.RemoteAccessServer.Seed</TypeId>
+            <Properties>
+              <DiscoveredTypeProperty>
+                <TypeId>System!System.Entity</TypeId>
+                <Property>DisplayName</Property>
+              </DiscoveredTypeProperty>
+            </Properties>
+          </DiscoveryClassItem>
+        </DiscoveryClasses>
+        <DiscoveryRelationships>
+          <DiscoveryRelationshipItem>
+            <TypeId>Windows!Microsoft.Windows.ComputerHostsLocalApplication</TypeId>
+            <Properties />
+          </DiscoveryRelationshipItem>
+        </DiscoveryRelationships>
+      </DiscoveryConfig>
+    </Instance>
+    <Instance ID="Instance9dad97d1c3184f9db80ca007adafaa51" Type="Microsoft.SystemCenter.Authoring.CodeGeneration.Monitoring.Discovery" Version="1.0.0.0">
+      <DiscoveryConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+        <Id>Discovery.RemoteAccessServer</Id>
+        <DisplayName>Remote Access Server Discovery</DisplayName>
+        <Description>Remote Access Server Discovery</Description>
+        <DataSourceId>DS</DataSourceId>
+        <DataSourceConfig>&lt;IntervalSeconds&gt;600&lt;/IntervalSeconds&gt;&lt;SyncTime&gt;00:01&lt;/SyncTime&gt;&lt;ComputerName&gt;$Target/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/PrincipalName$&lt;/ComputerName&gt;&lt;CreateSingleSite&gt;true&lt;/CreateSingleSite&gt;</DataSourceConfig>
+        <DataSourceRunAs>AP.RemoteAccess.Login</DataSourceRunAs>
+        <DataSourceType>AP.Remote.Access.RemoteAccessServer.Discovery.DataSource</DataSourceType>
+        <Target>AP.Remote.Access.Class.RemoteAccessServer.Seed</Target>
+        <Enabled>true</Enabled>
+        <Remotable>true</Remotable>
+        <Priority>Normal</Priority>
+        <ConfirmDelivery>false</ConfirmDelivery>
+        <Category>Discovery</Category>
+        <DiscoveryClasses>
+          <DiscoveryClassItem>
+            <TypeId>AP.Remote.Access.Class.RemoteAccessServer</TypeId>
+            <Properties>
+              <DiscoveredTypeProperty>
+                <TypeId>System!System.Entity</TypeId>
+                <Property>DisplayName</Property>
+              </DiscoveredTypeProperty>
+            </Properties>
+          </DiscoveryClassItem>
+        </DiscoveryClasses>
+        <DiscoveryRelationships />
+      </DiscoveryConfig>
+    </Instance>
+  </Instances>
+</TemplateGroup>

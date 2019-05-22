@@ -1,0 +1,434 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+      
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.IPSec" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IPSEC_HEURISTIC_PORT_BLOCKED_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_PORT_BLOCKED_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_PORT_BLOCKED_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>IPsec</ComponentName>
+          <HeuristicId>2148073473</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.IPSec" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IPSEC_HEURISTIC_INVALID_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_INVALID_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_INVALID_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>IPsec</ComponentName>
+          <HeuristicId>2148073474</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.IPSec" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IPSEC_HEURISTIC_MISSING_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_MISSING_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_MISSING_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>IPsec</ComponentName>
+          <HeuristicId>2148073476</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.IPSec" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>IPsec</ComponentName>
+          <HeuristicId>2148073475</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.IPSec" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IPSEC_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IPSEC_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>IPsec</ComponentName>
+          <HeuristicId>2148073472</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!--IPSec Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.IPSec.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.IPSec" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.IPSec.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.IPSec" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.IPSec.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.IPSec" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.IPSec.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.IPSec" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT">
+          <Name>IPsec invalid cert</Name>
+          <Description>The certificate used for IPsec authentication is not valid.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT" SubElementID="DA_IPSEC_HEURISTIC_INVALID_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT" SubElementID="DA_IPSEC_HEURISTIC_INVALID_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT" SubElementID="DA_IPSEC_HEURISTIC_INVALID_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT_AlertMessageResourceID">
+          <Name>IPsec cert invalid</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT">
+          <Name>IPsec cert missing</Name>
+          <Description>There is no valid certificate to be used by IPsec which chains to the root/intermediate certificate configured to be used by IPsec in the DirectAccess configuration.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT" SubElementID="DA_IPSEC_HEURISTIC_MISSING_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT" SubElementID="DA_IPSEC_HEURISTIC_MISSING_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT" SubElementID="DA_IPSEC_HEURISTIC_MISSING_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT_AlertMessageResourceID">
+          <Name>IPsec cert missing</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT">
+          <Name>IPSec Root Cert Missing</Name>
+          <Description>The certificate used for IPsec authentication is missing.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT" SubElementID="DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT" SubElementID="DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT" SubElementID="DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT_AlertMessageResourceID">
+          <Name>IPSec root cert missing</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED">
+          <Name>Ports or Protocols Blocked</Name>
+          <Description>
+            Ports or protocols blocked on the internal or external network adapters are preventing Remote Access from functioning as expected.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED" SubElementID="DA_IPSEC_HEURISTIC_PORT_BLOCKED_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED" SubElementID="DA_IPSEC_HEURISTIC_PORT_BLOCKED_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED" SubElementID="DA_IPSEC_HEURISTIC_PORT_BLOCKED_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED_AlertMessageResourceID">
+          <Name>Ports or Protocols blocked</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN">
+          <Name>IPSec uknown error</Name>
+          <Description>Unknown error with IPSec</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN" SubElementID="DA_IPSEC_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN" SubElementID="DA_IPSEC_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN" SubElementID="DA_IPSEC_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>IPsec unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!--IPSec Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.IPSec.AvailabilityRollup">
+          <Name>Direct Access Server from IPSec Availability Health Rollup</Name>
+          <Description>Direct Access Server from IPSec Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.IPSec.ConfigurationRollup">
+          <Name>Direct Access Server from IPSec Configuration Health Rollup</Name>
+          <Description>Direct Access Server from IPSec Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.IPSec.PerformanceRollup">
+          <Name>Direct Access Server from IPSec Performance Health Rollup</Name>
+          <Description>Direct Access Server from IPSec Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.IPSec.SecurityRollup">
+          <Name>Direct Access Server from IPSec Security Health Rollup</Name>
+          <Description>Direct Access Server from IPSec Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_PORT_BLOCKED" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Ports or protocols blocked on the internal or external network adapters are preventing Remote Access from functioning as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. One or more protocols (UDP 3544, TCP 443, Protocol 41, Ping Echo and Ping Echo Reply) are blocked on the external adapter.</maml:para>
+              <maml:para>2. One or more protocols (Protocol 41, TCP, UDP, ICMPv6, all IPv6 connectivity, UDP 500 IKE/AuthIP) are blocked on the internal adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that UDP 3544, TCP 443, Protocol 41, Ping Echo (used for Teredo), and Ping Echo Reply are not blocked on the external adapter.</maml:para>
+              <maml:para>2. On the internal adapter, verify that Protocol 41, TCP, UDP, ICMPv6, and UDP 500 IKE/AuthIP protocols are not blocked.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_INVALID_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The certificate used for IPsec authentication is not valid.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has expired.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that the certificate is not expired. Renew the certificate if required.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_ROOT_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The certificate used for IPsec authentication is missing.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has been removed from the computer store.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that a valid certificate is in the machine store, and that DirectAccess is configured to use the same certificate.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_MISSING_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>There is no valid certificate to be used by IPsec which chains to the root/intermediate certificate configured to be used by IPsec in the DirectAccess configuration.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has not been installed or is not valid.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Please ensure that a valid certificate is present in the machine store and DA server is configured to use the corresponding root certificate.The valid certificate must satisfy the following:</maml:para>
+              <maml:para>a. Should not be expired.</maml:para>
+              <maml:para>b. Should have a private key.</maml:para>
+              <maml:para>c. Should be configured to be used for Client authentication.</maml:para>
+              <maml:para>d. Should chain to the configured root/intermediate cert.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IPSEC_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown IPsec Error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>01. The certificate has not been installed or is not valid.</maml:para>
+              <maml:para>02. One or more protocols (UDP 3544, TCP 443, Protocol 41, Ping Echo and Ping Echo Reply) are blocked on the external adapter.</maml:para>
+              <maml:para>03. One or more protocols (Protocol 41, TCP, UDP, ICMPv6, all IPv6 connectivity, UDP 500 IKE/AuthIP) are blocked on the internal adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>01. Please ensure that a valid certificate is present in the machine store and DA server is configured to use the corresponding root certificate.The valid certificate must satisfy the following:</maml:para>
+              <maml:para>a. Should not be expired.</maml:para>
+              <maml:para>b. Should have a private key.</maml:para>
+              <maml:para>c. Should be configured to be used for Client authentication.</maml:para>
+              <maml:para>d. Should chain to the configured root/intermediate cert.</maml:para>
+              <maml:para>02. Ensure that UDP 3544, TCP 443, Protocol 41, Ping Echo (used for Teredo), and Ping Echo Reply are not blocked on the external adapter.</maml:para>
+              <maml:para>03. On the internal adapter, verify that Protocol 41, TCP, UDP, ICMPv6, and UDP 500 IKE/AuthIP protocols are not blocked.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+      
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

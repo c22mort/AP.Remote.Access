@@ -1,0 +1,364 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+      
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NAT64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NAT64_HEURISTIC_CONNECTION_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_CONNECTION_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_CONNECTION_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Nat64</ComponentName>
+          <HeuristicId>2147942402</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NAT64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NAT64_HEURISTIC_DISABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_DISABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_DISABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Nat64</ComponentName>
+          <HeuristicId>2147942401</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NAT64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NAT64_HEURISTIC_TRANSLATION_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_TRANSLATION_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_TRANSLATION_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Nat64</ComponentName>
+          <HeuristicId>2147942403</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NAT64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NAT64_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NAT64_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Nat64</ComponentName>
+          <HeuristicId>2147942400</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!--  NAT64 Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NAT64.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NAT64" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NAT64.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NAT64" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NAT64.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NAT64" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NAT64.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NAT64" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+  
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION">
+          <Name>Nat64 Connectivity</Name>
+          <Description>NAT64 connectivity failed. DirectAccess clients might not be able to access IPv4-only servers in the corporate network.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION" SubElementID="DA_NAT64_HEURISTIC_CONNECTION_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION" SubElementID="DA_NAT64_HEURISTIC_CONNECTION_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION" SubElementID="DA_NAT64_HEURISTIC_CONNECTION_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION_AlertMessageResourceID">
+          <Name>Nat64 connectivity failed</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE">
+          <Name>Nat64 disabled</Name>
+          <Description>NAT64 is disabled on the server. NAT64 is used to provide access to IPv4-only servers in the corporate network.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE" SubElementID="DA_NAT64_HEURISTIC_DISABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE" SubElementID="DA_NAT64_HEURISTIC_DISABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE" SubElementID="DA_NAT64_HEURISTIC_DISABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE_AlertMessageResourceID">
+          <Name>Nat64 disabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION">
+          <Name>Nat64 Transalation</Name>
+          <Description>
+            NAT64 translation failures might be preventing remote clients from accessing IPv4-only servers in the corporate network.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION" SubElementID="DA_NAT64_HEURISTIC_TRANSLATION_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION" SubElementID="DA_NAT64_HEURISTIC_TRANSLATION_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION" SubElementID="DA_NAT64_HEURISTIC_TRANSLATION_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION_AlertMessageResourceID">
+          <Name>NAT64 translation failures</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN">
+          <Name>Nat64 unknown error</Name>
+          <Description>An unknown error occured with Nat64</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN" SubElementID="DA_NAT64_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN" SubElementID="DA_NAT64_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN" SubElementID="DA_NAT64_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Nat64 unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!--  NAT64 Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NAT64.AvailabilityRollup">
+          <Name>Direct Access Server from NAT64 Availability Health Rollup</Name>
+          <Description>Direct Access Server from NAT64 Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NAT64.ConfigurationRollup">
+          <Name>Direct Access Server from NAT64 Configuration Health Rollup</Name>
+          <Description>Direct Access Server from NAT64 Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NAT64.PerformanceRollup">
+          <Name>Direct Access Server from NAT64 Performance Health Rollup</Name>
+          <Description>Direct Access Server from NAT64 Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NAT64.SecurityRollup">
+          <Name>Direct Access Server from NAT64 Security Health Rollup</Name>
+          <Description>Direct Access Server from NAT64 Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_DISABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>NAT64 is disabled on the server. NAT64 is used to provide access to IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>NAT64 is not enabled on the server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that NAT64 is enabled on the server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_CONNECTION" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>NAT64 connectivity failed. DirectAccess clients might not be able to access IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. NAT64 is not enabled on the server.</maml:para>
+              <maml:para>2. The NAT64 server cannot be reached.</maml:para>
+              <maml:para>3. Web probe addresses cannot be reached.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify that NAT64 is enabled on the server.</maml:para>
+              <maml:para>2. For native IPv6 connectivity, verify that the NAT64/DNS64 prefix is configured in the DirectAccess settings.</maml:para>
+              <maml:para>3. In the Remote Access Server Setup Wizard, ensure that the default NRPT entry points to the internal address of the NAT64/DNS64 server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_TRANSLATION" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>NAT64 translation failures might be preventing remote clients from accessing IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. NAT64 is not enabled on the server.</maml:para>
+              <maml:para>2. The NAT64 server cannot be reached.</maml:para>
+              <maml:para>3. NAT64 translation has failed.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the NAT64 server can be reached on the corporate network.</maml:para>
+              <maml:para>2. Verify that NAT64 is enabled on the server.</maml:para>
+              <maml:para>3. For native IPv6 connectivity, verify that the NAT64/DNS64 prefix is configured in the DirectAccess settings.</maml:para>
+              <maml:para>4. In the Remote Access Server Setup Wizard, ensure that the default NRPT entry points to the internal address of the NAT64/DNS64 server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NAT64_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown NAT64 translation error might be preventing remote clients from accessing IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. NAT64 is not enabled on the server.</maml:para>
+              <maml:para>2. The NAT64 server cannot be reached.</maml:para>
+              <maml:para>3. NAT64 translation has failed.</maml:para>
+              <maml:para>4. Web probe addresses cannot be reached.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the NAT64 server can be reached on the corporate network.</maml:para>
+              <maml:para>2. Verify that NAT64 is enabled on the server.</maml:para>
+              <maml:para>3. For native IPv6 connectivity, verify that the NAT64/DNS64 prefix is configured in the DirectAccess settings.</maml:para>
+              <maml:para>4. In the Remote Access Server Setup Wizard, ensure that the default NRPT entry points to the internal address of the NAT64/DNS64 server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    </LanguagePack> 
+  </LanguagePacks>
+</ManagementPackFragment>

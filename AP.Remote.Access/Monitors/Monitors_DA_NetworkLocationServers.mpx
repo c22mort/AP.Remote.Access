@@ -1,0 +1,599 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_CERT_BINDING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_CERT_BINDING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_CERT_BINDING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335622</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_REACHABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_REACHABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_REACHABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335617</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_URL_AVAILABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_URL_AVAILABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_URL_AVAILABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335618</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_INVALID_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_INVALID_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_INVALID_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335620</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335619</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_MISSING_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_MISSING_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_MISSING_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335621</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkLocationServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_NLS_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_NLS_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_NLS_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Location Server</ComponentName>
+          <HeuristicId>2148335616</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- Network Location Server Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkLocationServer" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkLocationServer" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkLocationServer" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkLocationServer" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING">
+          <Name>NLS cert binding modified</Name>
+          <Description>The certificate binding for the network location server has been modified. Without the correct certificate, connectivity for DirectAccess clients located in the internal network will not work as expected.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING" SubElementID="DA_NLS_HEURISTIC_CERT_BINDING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING" SubElementID="DA_NLS_HEURISTIC_CERT_BINDING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING" SubElementID="DA_NLS_HEURISTIC_CERT_BINDING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING_AlertMessageResourceID">
+          <Name>NLS cert binding modified</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT">
+          <Name>NLS cert invalid</Name>
+          <Description>The network location server certificate is not valid. Connectivity for DirectAccess clients located in the internal network will not work as expected.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT" SubElementID="DA_NLS_HEURISTIC_INVALID_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT" SubElementID="DA_NLS_HEURISTIC_INVALID_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT" SubElementID="DA_NLS_HEURISTIC_INVALID_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT_AlertMessageResourceID">
+          <Name>NLS cert invalid</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY">
+          <Name>NLS DNS entry invalid</Name>
+          <Description>The network location server does not have a valid DNS entry. DirectAccess clients located in the corporate network will not be able to resolve the server name, and internal network connectivity will not work as expected.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY" SubElementID="DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY" SubElementID="DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY" SubElementID="DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY_AlertMessageResourceID">
+          <Name>NLS DNS entry invalid</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT">
+          <Name>NLS cert not found</Name>
+          <Description>The certificate configured for the network location server cannot be found. DirectAccess clients located in the corporate network might experience connectivity issues.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT" SubElementID="DA_NLS_HEURISTIC_MISSING_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT" SubElementID="DA_NLS_HEURISTIC_MISSING_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT" SubElementID="DA_NLS_HEURISTIC_MISSING_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT_AlertMessageResourceID">
+          <Name>NLS cert not found</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE">
+          <Name>NLS Reachability</Name>
+          <Description>
+            The network location server is unavailable or not responding. This might disrupt DirectAccess connectivity, and connectivity \
+            for DirectAccess clients located inside the corporate network.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE" SubElementID="DA_NLS_HEURISTIC_REACHABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE" SubElementID="DA_NLS_HEURISTIC_REACHABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE" SubElementID="DA_NLS_HEURISTIC_REACHABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE_AlertMessageResourceID">
+          <Name>NLS unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN">
+          <Name>NLS unkown erros</Name>
+          <Description>An unknown error occured with Network Location Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN" SubElementID="DA_NLS_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN" SubElementID="DA_NLS_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN" SubElementID="DA_NLS_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>NLS unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE">
+          <Name>NLS URL Availability</Name>
+          <Description>There is no response from the network location server URL. DirectAccess connectivity might not work as expected, and DirectAccess clients located inside the corporate network might not be able to reach internal resources</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE" SubElementID="DA_NLS_HEURISTIC_URL_AVAILABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE" SubElementID="DA_NLS_HEURISTIC_URL_AVAILABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE" SubElementID="DA_NLS_HEURISTIC_URL_AVAILABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE_AlertMessageResourceID">
+          <Name>NLS URL unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- Network Location Server Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.AvailabilityRollup">
+          <Name>Direct Access Server from Network Location Server Availability Health Rollup</Name>
+          <Description>Direct Access Server from Network Location Server Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.ConfigurationRollup">
+          <Name>Direct Access Server from Network Location Server Configuration Health Rollup</Name>
+          <Description>Direct Access Server from Network Location Server Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.PerformanceRollup">
+          <Name>Direct Access Server from Network Location Server Performance Health Rollup</Name>
+          <Description>Direct Access Server from Network Location Server Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkLocationServer.SecurityRollup">
+          <Name>Direct Access Server from Network Location Server Security Health Rollup</Name>
+          <Description>Direct Access Server from Network Location Server Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_MISSING_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The certificate configured for the network location server cannot be found. DirectAccess clients located in the corporate network might experience connectivity issues.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has been removed from the computer store.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that a valid certificate exists in the machine store, and that the network location server is configured to use the certificate.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_CERT_BINDING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The certificate binding for the network location server has been modified. Without the correct certificate, connectivity for DirectAccess clients located in the internal network will not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The certificate binding has been changed by another process or application.</maml:para>
+              <maml:para>2. The certificate is not bound to one or more IP addresses on the internal interface.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure the certificate binding has not been modified for the network location server.</maml:para>
+              <maml:para>2. If you bind port with another certificate for use with a different application,  ensure that the network location server is configured to use the same certificate binding as that application.</maml:para>
+              <maml:para>3. Ensure that the certificate is bound to all the IP addresses on the internal interface.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_REACHABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The network location server is unavailable or not responding. This might disrupt DirectAccess connectivity, and connectivity for DirectAccess clients located inside the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The network location server is not running on a server that is highly available to clients on the internal network.</maml:para>
+              <maml:para>2. The IIS server is not available.</maml:para>
+              <maml:para>3. ICMP might be disabled on network location server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that the domain controller can be reached</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_URL_AVAILABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>There is no response from the network location server URL. DirectAccess connectivity might not work as expected, and DirectAccess clients located inside the corporate network might not be able to reach internal resources.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The network location server website is unavailable.</maml:para>
+              <maml:para>2. Network issues are causing connection issues.</maml:para>
+              <maml:para>3. The network location server is not running on a highly available server.</maml:para>
+              <maml:para>4. The IIS server is unavailable, or there is no response from the network location server URL.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Configure the network location server on a server that is highly available to clients on the internal network.</maml:para>
+              <maml:para>2. If the network location server is running on the Remote Access server, ensure that IIS is running, and that the URL is available.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_DNS_ENTRY" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The network location server does not have a valid DNS entry. DirectAccess clients located in the corporate network will not be able to resolve the server name, and internal network connectivity will not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. There is no valid DNS entry for the network location server.</maml:para>
+              <maml:para>2. DirectAccess settings for the network location server are not configured correctly.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure enterprise DNS servers can resolve the name of the network location server.</maml:para>
+              <maml:para>2. Enable fallback to local name resolution in the Remote Access Setup Wizard.</maml:para>
+              <maml:para>3. Verify connectivity to the DNS server, and check DNS server settings.</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_INVALID_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The network location server certificate is not valid. Connectivity for DirectAccess clients located in the internal network will not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has expired.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the certificate has not expired.</maml:para>
+              <maml:para>2. Renew the expired certificate.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_NLS_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown network location server error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>01. The certificate has expired.</maml:para>
+              <maml:para>02. There is no valid DNS entry for the network location server.</maml:para>
+              <maml:para>03. DirectAccess settings for the network location server are not configured correctly.</maml:para>
+              <maml:para>04. The network location server website is unavailable.</maml:para>
+              <maml:para>05. Network issues are causing connection issues.</maml:para>
+              <maml:para>06. The network location server is not running on a highly available server.</maml:para>
+              <maml:para>07. The IIS server is unavailable, or there is no response from the network location server URL.</maml:para>
+              <maml:para>08. The network location server is unavailable or not responding. This might disrupt DirectAccess connectivity, and connectivity for DirectAccess clients located inside the corporate network.</maml:para>
+              <maml:para>09. The certificate binding has been changed by another process or application.</maml:para>
+              <maml:para>10. The certificate is not bound to one or more IP addresses on the internal interface.</maml:para>
+              <maml:para>11. The certificate has been removed from the computer store.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>01. Ensure that the certificate has not expired.</maml:para>
+              <maml:para>02. Renew the expired certificate.</maml:para>
+              <maml:para>03. Ensure enterprise DNS servers can resolve the name of the network location server.</maml:para>
+              <maml:para>04. Enable fallback to local name resolution in the Remote Access Setup Wizard.</maml:para>
+              <maml:para>05. Verify connectivity to the DNS server, and check DNS server settings.</maml:para>
+              <maml:para>06. Configure the network location server on a server that is highly available to clients on the internal network.</maml:para>
+              <maml:para>07. If the network location server is running on the Remote Access server, ensure that IIS is running, and that the URL is available.</maml:para>
+              <maml:para>08. The network location server is not running on a server that is highly available to clients on the internal network.</maml:para>
+              <maml:para>09. The IIS server is not available.</maml:para>
+              <maml:para>10. ICMP might be disabled on network location server.</maml:para>
+              <maml:para>11. Ensure the certificate binding has not been modified for the network location server.</maml:para>
+              <maml:para>12. If you bind port with another certificate for use with a different application,  ensure that the network location server is configured to use the same certificate binding as that application.</maml:para>
+              <maml:para>13. Ensure that the certificate is bound to all the IP addresses on the internal interface.</maml:para>
+              <maml:para>14. Ensure that a valid certificate exists in the machine store, and that the network location server is configured to use the certificate.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

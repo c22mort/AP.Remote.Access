@@ -1,0 +1,1620 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.MemoryAllocationFailureMonitor -->
+      <UnitMonitor ID="AP.Remote.Access.MemoryAllocationFailureMonitor" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>PerformanceHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.MemoryAllocationFailureMonitor_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">20104</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.IPCPnegotiationfailure -->
+      <UnitMonitor ID="AP.Remote.Access.IPCPnegotiationfailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>PerformanceHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.IPCPnegotiationfailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>^(20165|20166|20167|20169)$</Pattern>
+                </RegExExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Memoryallocationfailure -->
+      <UnitMonitor ID="AP.Remote.Access.Memoryallocationfailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>PerformanceHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Memoryallocationfailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>^(30003|31004|32002|34002)$</Pattern>
+                </RegExExpression>
+              </Expression>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>SharedAccess_NAT|ipnathlp</Pattern>
+                </RegExExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Nomorelicenses -->
+      <UnitMonitor ID="AP.Remote.Access.Nomorelicenses" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>PerformanceHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Nomorelicenses_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Warning</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Warning" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">20097</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.RasmanPortPpenFailure -->
+      <UnitMonitor ID="AP.Remote.Access.RasmanPortPpenFailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>PerformanceHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.RasmanPortPpenFailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>^(20040|20041|20059|20060|20061)$</Pattern>
+                </RegExExpression>
+              </Expression>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>RemoteAccess|Rasman</Pattern>
+                </RegExExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Hardwaredeviceerror -->
+      <UnitMonitor ID="AP.Remote.Access.Hardwaredeviceerror" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>AvailabilityHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Hardwaredeviceerror_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">20013</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Protocolinitializationfailure -->
+      <UnitMonitor ID="AP.Remote.Access.Protocolinitializationfailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>AvailabilityHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Protocolinitializationfailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>^(41001|41004|41005|41008)$</Pattern>
+                </RegExExpression>
+              </Expression>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>ContainsSubstring</Operator>
+                  <Pattern>IGMPv2</Pattern>
+                </RegExExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.RasmanUnexpectedTerminatedMonitor -->
+      <UnitMonitor ID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.2SingleEventLog2StateMonitorType" ConfirmDelivery="true">
+        <Category>AvailabilityHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="FirstEventRaised" MonitorTypeStateID="FirstEventRaised" HealthState="Error" />
+          <OperationalState ID="SecondEventRaised" MonitorTypeStateID="SecondEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <FirstComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</FirstComputerName>
+          <FirstLogName>System</FirstLogName>
+          <FirstExpression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">7031</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Service Control Manager</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Params/Param[1]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Remote Access Connection Manager</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </FirstExpression>
+          <SecondComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</SecondComputerName>
+          <SecondLogName>System</SecondLogName>
+          <SecondExpression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">7036</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Service Control Manager</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Params/Param[1]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Remote Access Connection Manager</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Params/Param[2]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">running</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </SecondExpression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor -->
+      <UnitMonitor ID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.2SingleEventLog2StateMonitorType" ConfirmDelivery="true">
+        <Category>AvailabilityHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="FirstEventRaised" MonitorTypeStateID="FirstEventRaised" HealthState="Error" />
+          <OperationalState ID="SecondEventRaised" MonitorTypeStateID="SecondEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <FirstComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</FirstComputerName>
+          <FirstLogName>System</FirstLogName>
+          <FirstExpression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">7031</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Service Control Manager</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Params/Param[1]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Routing and Remote Access</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </FirstExpression>
+          <SecondComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</SecondComputerName>
+          <SecondLogName>System</SecondLogName>
+          <SecondExpression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">7036</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Service Control Manager</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Params/Param[1]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">Routing and Remote Access</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">Params/Param[2]</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">running</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </SecondExpression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.ServiceMonitor -->
+      <UnitMonitor ID="AP.Remote.Access.ServiceMonitor" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.CheckNTServiceStateMonitorType" ConfirmDelivery="false">
+        <Category>AvailabilityHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.ServiceMonitor_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="Running" MonitorTypeStateID="Running" HealthState="Success" />
+          <OperationalState ID="NotRunning" MonitorTypeStateID="NotRunning" HealthState="Error" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <ServiceName>RemoteAccess</ServiceName>
+          <CheckStartupType />
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.AuthenticationAccountingfailure -->
+      <UnitMonitor ID="AP.Remote.Access.AuthenticationAccountingfailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>ConfigurationHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.AuthenticationAccountingfailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>^(20146|20168|20187|20189|20196)$</Pattern>
+                </RegExExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Configurationfailure -->
+      <UnitMonitor ID="AP.Remote.Access.Configurationfailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>ConfigurationHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Configurationfailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>MatchesRegularExpression</Operator>
+                  <Pattern>^(41034|41035|41044|41045|41046|41047|41048|41049|41050|41051|41054|41055)$</Pattern>
+                </RegExExpression>
+              </Expression>
+              <Expression>
+                <RegExExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>ContainsSubstring</Operator>
+                  <Pattern>IGMPv2</Pattern>
+                </RegExExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.IPSecrelatedfailures -->
+      <UnitMonitor ID="AP.Remote.Access.IPSecrelatedfailures" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>ConfigurationHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.IPSecrelatedfailures_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">20192</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Packetfilterrelatedfailure -->
+      <UnitMonitor ID="AP.Remote.Access.Packetfilterrelatedfailure" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.VPNServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="Windows!Microsoft.Windows.SingleEventLogManualReset2StateMonitorType" ConfirmDelivery="true">
+        <Category>ConfigurationHealth</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Packetfilterrelatedfailure_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>High</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="EventRaised" MonitorTypeStateID="EventRaised" HealthState="Error" />
+          <OperationalState ID="ManualResetEventRaised" MonitorTypeStateID="ManualResetEventRaised" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <ComputerName>$Target/Host/Host/Property[Type="Windows!Microsoft.Windows.Computer"]/NetworkName$</ComputerName>
+          <LogName>System</LogName>
+          <Expression>
+            <And>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="UnsignedInteger">EventDisplayNumber</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="UnsignedInteger">20193</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+              <Expression>
+                <SimpleExpression>
+                  <ValueExpression>
+                    <XPathQuery Type="String">PublisherName</XPathQuery>
+                  </ValueExpression>
+                  <Operator>Equal</Operator>
+                  <ValueExpression>
+                    <Value Type="String">RemoteAccess</Value>
+                  </ValueExpression>
+                </SimpleExpression>
+              </Expression>
+            </And>
+          </Expression>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- VPN Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.VPNServer.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.VPNServer" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.VPNServer.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.VPNServer" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.VPNServer.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.VPNServer" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.VPNServer.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.VPNServer" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+      <StringResource ID="AP.Remote.Access.AuthenticationAccountingfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Configurationfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Hardwaredeviceerror_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.IPCPnegotiationfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.IPSecrelatedfailures_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Memoryallocationfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.MemoryAllocationFailureMonitor_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Nomorelicenses_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Packetfilterrelatedfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Protocolinitializationfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Rasman.Service.Monitor_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.RasmanPortPpenFailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.ServiceMonitor_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Socketoperationfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.SSTPClientCertificateMissing_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.SSTPcookieaddfailure_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.SSTPwrongcertificateconfiguration_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.UnabletoprocessMOBIKEupdate_AlertMessageResourceID" />
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <DisplayString ElementID="AP.Remote.Access.AuthenticationAccountingfailure">
+          <Name>Authentication/Accounting failure Monitor</Name>
+          <Description>The Routing and Remote Access service encountered an error while performing authentication or accounting.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.AuthenticationAccountingfailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.AuthenticationAccountingfailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.AuthenticationAccountingfailure_AlertMessageResourceID">
+          <Name>Authentication/Accounting failure Monitor</Name>
+          <Description>The Routing and Remote Access service encountered an error while performing authentication or accounting.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Configurationfailure">
+          <Name>Configuration failure</Name>
+          <Description>The Internet Group Management Protocol version 2 (IGMPv2) detected a configuration failure.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Configurationfailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Configurationfailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Configurationfailure_AlertMessageResourceID">
+          <Name>Configuration failure</Name>
+          <Description>The Internet Group Management Protocol version 2 (IGMPv2) detected a configuration failure.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Hardwaredeviceerror">
+          <Name>Hardware device error Monitor</Name>
+          <Description>The connection attempt failed because the device connected to the port is not responding.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Hardwaredeviceerror" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Hardwaredeviceerror" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Hardwaredeviceerror_AlertMessageResourceID">
+          <Name>Hardware device error Monitor</Name>
+          <Description>The connection attempt failed because the device connected to the port is not responding.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPCPnegotiationfailure">
+          <Name>IPCP negotiation failure</Name>
+          <Description>The Routing and Remote Access service encountered an error in handing out IP address to dial-in client(s) during IP Control Protocol (IPCP) negotiation.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPCPnegotiationfailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPCPnegotiationfailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPCPnegotiationfailure_AlertMessageResourceID">
+          <Name>IPCP negotiation failure</Name>
+          <Description>The Routing and Remote Access service encountered an error in handing out IP address to dial-in client(s) during IP Control Protocol (IPCP) negotiation.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPSecrelatedfailures">
+          <Name>IPSec related failures</Name>
+          <Description>The connection attempt failed because a machine certificate was not found for IP Security (IPSec).</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPSecrelatedfailures" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPSecrelatedfailures" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.IPSecrelatedfailures_AlertMessageResourceID">
+          <Name>IPSec related failures</Name>
+          <Description>The connection attempt failed because a machine certificate was not found for IP Security (IPSec).</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Memoryallocationfailure">
+          <Name>Memory allocation failure</Name>
+          <Description>The Network Address Translation (NAT) protocol encountered a memory allocation failure.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Memoryallocationfailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Memoryallocationfailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Memoryallocationfailure_AlertMessageResourceID">
+          <Name>Memory allocation failure</Name>
+          <Description>The Network Address Translation (NAT) protocol encountered a memory allocation failure.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MemoryAllocationFailureMonitor">
+          <Name>Memory Allocation Monitor</Name>
+          <Description>The Routing and Remote Access service could not start or is not fully functional because of memory allocation failure.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MemoryAllocationFailureMonitor" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MemoryAllocationFailureMonitor" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MemoryAllocationFailureMonitor_AlertMessageResourceID">
+          <Name>Memory Allocation Monitor</Name>
+          <Description>The Routing and Remote Access service could not start or is not fully functional because of memory allocation failure.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Nomorelicenses">
+          <Name>No more licenses monitor</Name>
+          <Description>A user was unable to connect to the Routing and Remote Access server as the server has exceeded its client license limit.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Nomorelicenses" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Nomorelicenses" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Nomorelicenses_AlertMessageResourceID">
+          <Name>No more licenses monitor</Name>
+          <Description>A user was unable to connect to the Routing and Remote Access server as the server has exceeded its client license limit.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Packetfilterrelatedfailure">
+          <Name>Packet filter related failure</Name>
+          <Description>The Routing and Remote Access service encountered an error while configuring packet filter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Packetfilterrelatedfailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Packetfilterrelatedfailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Packetfilterrelatedfailure_AlertMessageResourceID">
+          <Name>Packet filter related failure</Name>
+          <Description>The Routing and Remote Access service encountered an error while configuring packet filter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Protocolinitializationfailure">
+          <Name>Protocol initialization failure</Name>
+          <Description>The Internet Group Management Protocol version 2 (IGMPv2) encountered an error during initialization.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Protocolinitializationfailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Protocolinitializationfailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Protocolinitializationfailure_AlertMessageResourceID">
+          <Name>Protocol initialization failure</Name>
+          <Description>The Internet Group Management Protocol version 2 (IGMPv2) encountered an error during initialization.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Rasman.Service.Monitor_AlertMessageResourceID">
+          <Name>Remote Access Connection Manager Service Monitor</Name>
+          <Description>The Remote Access Manager (Rasman) service is not running.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanPortPpenFailure">
+          <Name>Rasman port open failure Monitor</Name>
+          <Description>The Routing and Remote Access service or The Remote Access Connection Manager service encountered an error while opening a port for remote access.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanPortPpenFailure" SubElementID="EventRaised">
+          <Name>Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanPortPpenFailure" SubElementID="ManualResetEventRaised">
+          <Name>Manual Reset Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanPortPpenFailure_AlertMessageResourceID">
+          <Name>Rasman port open failure Monitor</Name>
+          <Description>The Routing and Remote Access service or The Remote Access Connection Manager service encountered an error while opening a port for remote access.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor">
+          <Name>Remote Access Connection Manager Unexpectedly Terminated Monitor</Name>
+          <Description>The Remote Access Manager (Rasman) service was unexpectedly terminated.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor" SubElementID="FirstEventRaised">
+          <Name>First Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor" SubElementID="SecondEventRaised">
+          <Name>Second Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor_AlertMessageResourceID">
+          <Name>Remote Access Connection Manager Unexpectedly Terminated Monitor</Name>
+          <Description>The Remote Access Manager (Rasman) service was unexpectedly terminated.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor">
+          <Name>Routing and Remote Access Unexpectedly Terminated Monitor</Name>
+          <Description>The Remote Access (RemoteAccess) service was unexpectedly terminated.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor" SubElementID="FirstEventRaised">
+          <Name>First Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor" SubElementID="SecondEventRaised">
+          <Name>Second Event Raised</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor_AlertMessageResourceID">
+          <Name>Routing and Remote Access Unexpectedly Terminated Monitor</Name>
+          <Description>The Remote Access (Remote Access) service was unexpectedly terminated.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.ServiceMonitor">
+          <Name>Routing and Remote Access Service Monitor</Name>
+          <Description>The Remote Access (Remote Access) service is not running.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.ServiceMonitor" SubElementID="NotRunning">
+          <Name>Not Running</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.ServiceMonitor" SubElementID="Running">
+          <Name>Running</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.ServiceMonitor_AlertMessageResourceID">
+          <Name>Remote Access Service Monitor</Name>
+          <Description>The Remote Access (Remote Access) service is not running.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Socketoperationfailure_AlertMessageResourceID">
+          <Name>Socket operation failure</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.SSTPClientCertificateMissing_AlertMessageResourceID">
+          <Name>SSTP Client Certificate Missing</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.SSTPcookieaddfailure_AlertMessageResourceID">
+          <Name>SSTP cookie add failure</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.SSTPwrongcertificateconfiguration_AlertMessageResourceID">
+          <Name>SSTP wrong certificate configuration</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.UnabletoprocessMOBIKEupdate_AlertMessageResourceID">
+          <Name>Unable to process MOBIKE update</Name>
+        </DisplayString>
+
+        <!-- VPN Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.VPNServer.AvailabilityRollup">
+          <Name>Remote Access Server from VPN Server Availability Health Rollup</Name>
+          <Description>Remote Access Server from VPN Server Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.VPNServer.ConfigurationRollup">
+          <Name>Remote Access Server from VPN Server Configuration Health Rollup</Name>
+          <Description>Remote Access Server from VPN Server Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.VPNServer.PerformanceRollup">
+          <Name>Remote Access Server from VPN Server Performance Health Rollup</Name>
+          <Description>Remote Access Server from VPN Server Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.VPNServer.SecurityRollup">
+          <Name>Remote Access Server from VPN Server Security Health Rollup</Name>
+          <Description>Remote Access Server from VPN Server Security Health Rollup</Description>
+        </DisplayString>
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.AuthenticationAccountingfailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.AuthenticationAccountingfailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>
+                The Routing and Remote Access service encountered an error while performing authentication
+
+                or accounting.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common reasons for this error are:
+              </maml:para>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>The RADIUS server did not respond to authentication/accounting request.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The service failed to retrieve Remote Access Server certificates.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The connection attempt failed because the Windows Authentication could not authenticate the user. The user might have specified incorrect credentials.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The RADIUS server sent an invalid response.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Sample Event #1: The RADIUS server %1 did not respond to the initial request.Please make sure that the server name or IP address and secret are correct.  </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #2: Could not retrieve the Remote Access Server''s certificate due to thefollowing error: %1 </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #3: The user %1 failed an authentication attempt due to the following reason: %2 </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #4: The user %1 connected from %2 but failed an authentication attempt due to the following reason: %3</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para> Sample Event #5: An invalid response was received from the RADIUS server %1. %2</maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Open Routing and Remote Access and verify that The server name or the IP address of the RADIUS server(s) is spelled correctly. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Secret is correct.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Make sure that the user specifies correct credentials.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>
+                    Verify whether the network protocols are configured correctly on the server and the
+
+                    client.
+                  </maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Configurationfailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Configurationfailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Internet Group Management Protocol version 2 (IGMPv2) detected a configuration failure.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common reasons for this error are:
+              </maml:para>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>IGMP proxy already owns an interface and there was an attempt to add another proxy interface.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>An attempt to add IGMP RAS server on multiple interfaces.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>An attempt to configure proxy on RAS server interface.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Incorrect configuration parameter(s) set on interface.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Sample Event#1: AddInterface() called to add an Igmp Proxy interface.Igmp proxy already owns another interface.The data is the error code.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#2: AddInterface() called to add an Igmp Ras interface.Ras Server cannot exist on multiple interfaces.The data is the error code.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#3: The version field in the IGMP config field is incorrect.Delete and create the IGMP config again.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#4: IGMP Protocol type for interface %1 has invalid value %2.The data is the error code.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#5: Cannot configure Proxy on RAS server interface %1.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#6: Static group %1 configured on Interface%2 not a valid MCast address.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#7: Static group %1 configured on Interface:%2 does not have valid mode.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#8: Static group %1 configured on Interface:%2 has invalid filter.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#9: Invalid robustness variable:%1 configured on Interface:%2. Max 7.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#10: Invalid Startup Query Count:%1 configured on Interface:%2.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#11: Failed to install IGMP Proxy on interface:%1.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#12: Failed to install IGMP Rtr-V-%1 on interface:%2.</maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Verify the configuration parameter(s) on the interface and make sure that they are valid. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>If the server is low on memory, take appropriate action to increase the available memory. See Help and Support Center for information on low memory.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Hardwaredeviceerror -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Hardwaredeviceerror" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The connection attempt failed because the device connected to the port is not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Hardware device connected to the port is not responding.Sample Event: The communication device attached to port %1 is not functioning.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>In Control Panel, use the Add Hardware Wizard to troubleshoot the device error. If you cannot correct the problem, contact the hardware vendor.</maml:para>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.IPCPnegotiationfailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.IPCPnegotiationfailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Routing and Remote Access service encountered an error in handing out IP address to dial-in client(s) during IP Control Protocol (IPCP) negotiation.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>The DHCP server couldn't be contacted.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The service ran out of IP address pool.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Sample Event #1: A connection has been established on port %1 using interface %2, but no IPaddress was obtained. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #2: A connection has been established on port %1 using interface %2, but theremote side got no IP address.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #3: No IP address is available to hand out to the dial-in client. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #4: Unable to contact a DHCP server. The Automatic Private IP Address %1 will beassigned to dial-in clients. Clients may be unable to access resources onthe network.</maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Verify whether the network connection between the RRAS server and DHCP server is available.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Verify whether the IP address pool on the RRAS server is exhausted and see whether you need to increase the pool size.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.IPSecrelatedfailures -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.IPSecrelatedfailures" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The connection attempt failed because a machine certificate was not found for IP Security (IPSec).</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common reasons for this error are:
+              </maml:para>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Not enough memory is available on the server.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The machine certificate is not found.</maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>If the server is low on memory, take appropriate action to increase the available memory. See Help and Support Center for information on low memory.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Install the machine certificate for L2TP connections. For information about installating L2TP computer certificate, contact your network administrator or see Help and Support Center.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Memoryallocationfailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Memoryallocationfailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Network Address Translation (NAT) protocol encountered a memory allocation failure.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common reason for this error is there is not enough available memory in the system.
+              </maml:para>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Sample Event#1: The DHCP allocator was unable to allocate %1 bytes of memory.This may indicate that the system is low on virtual memory,or that the memory-manager has encountered an internal error.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#2: The DNS proxy agent was unable to allocate %1 bytes of memory.This may indicate that the system is low on virtual memory,or that the memory-manager has encountered an internal error.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#3: The Network Address Translator (NAT) was unable to allocate %1 bytes.This may indicate that the system is low on virtual memory,or that the memory-manager has encountered an internal error.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#4: The H.323 transparent proxy was unable to allocate %1 bytes of memory.This may indicate that the system is low on virtual memory,or that the memory-manager has encountered an internal error.</maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>If the server is low on memory, take appropriate action to increase the available memory. See Help and Support Center for information on low memory.</maml:para>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.MemoryAllocationFailureMonitor -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.MemoryAllocationFailureMonitor" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Routing and Remote Access service could not start or is not fully functional because of memory allocation failure.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The system is running in low memory.Sample Event: Memory allocation failure.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Take appropriate action to increase the available memory. See Help and Support Center for information on low memory.</maml:para>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Nomorelicenses -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Nomorelicenses" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A user was unable to connect to the Routing and Remote Access server as the server has exceeded its client license limit.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The Routing and Remote Access server has exceeded its client license limit.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Packetfilterrelatedfailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Packetfilterrelatedfailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Routing and Remote Access service encountered an error while configuring packet filter.Sample Event: An error occured while configuring IP packet filters over %1.  This is oftenthe result of another service, e.g Microsoft Proxy Server, also using theWindows 2000 filtering services.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para />
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Open Event Viewer, and search for packet filter events. Follow instructions for fixing any errors you find.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Stop Routing and Remote Access, restart the server, and restart Routing and Remote Access.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Protocolinitializationfailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Protocolinitializationfailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Internet Group Management Protocol version 2 (IGMPv2) encountered an error during initialization.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common reasons for this error are:
+              </maml:para>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>The protocol failed as there are not enough available system resources that are required. The system could be running in low memory.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The protocol received a request to start when it is already started.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Sample Event#1: IGMP was unable to initialize a critical section.The data is the exception code.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#2: IGMP received a start request when it was already running.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#3: IGMP was unable to start Windows Sockets.The data is the error code.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event#4: IGMP was unable to create a semaphore.The data is the error code.</maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>If the server is low on memory, take appropriate action to increase the available memory. See Help and Support Center for information on low memory.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Stop and restart the Routing and Remote Access service.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>If the problem persists, you might need to repair or reinstall the Windows operating system.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.RasmanPortPpenFailure -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.RasmanPortPpenFailure" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>
+                The Routing and Remote Access service or The Remote Access Connection Manager
+
+                service encountered an error while opening a port for remote access.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common reasons for this error are:
+              </maml:para>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>
+                    The Remote Access Connection Manager service failed to start the RAS Async Adapter driver
+
+                    (AsyncMac). The most common reasons for this error are:
+                  </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The RAS Async Adapter driver (AsyncMac) failed to initialize.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The Remote Access Connection Manager service does not have sufficient permissions to open the driver.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The Remote Access Connection Manager service failed to load rasser.dll.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The modem has moved to an unsupported BPS rate.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>The serial driver could not allocate adequate I/O queues.</maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>Sample Event #1: An attempt by RASSER.DLL to get an async media access control handle failed. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #2: RASMXS.DLL cannot load RASSER.DLL. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #3: The modem on %1 moved to an unsupported BPS rate.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #4 The serial driver could not allocate adequate I/O queues.This may result in an unreliable connection.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Sample Event #5:Remote Access Connection Manager could not reopen biplex port %1. This portwill not be available for calling in or calling out.Restart all Remote Access Service components. </maml:para>
+                </maml:listItem>
+              </maml:list>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para />
+              <maml:list>
+                <maml:listItem>
+                  <maml:para>
+                    Check whether the System account has read/execute permissions for the file
+
+                    %systemroot%\system32\drivers\asyncmac.sys. To check the permissions:
+                  </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Right-click the file name, and then click Properties. </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>On the Securities tab, verify that the System account read/execute permissions for the file.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Verify whether the file rasser.dll exists at %systemroot%\system32 folder.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>
+                    Verify whether the System account has read/execute permissions for rasser.dll.
+                    To check whether the System account has these permissions:
+                  </maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Right-click rastapi.dll, and click Properties.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>On the Security tab, verify whether the System account has read/execute permissions for rastapi.dll. If it does not, add them.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Move the modem to a supported BPS rate.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>Stop and restart the Routing and Remote Access service.</maml:para>
+                </maml:listItem>
+                <maml:listItem>
+                  <maml:para>
+                    If the problem persists, you might need to repair or reinstall the Windows operating
+
+                    system
+                  </maml:para>
+                </maml:listItem>
+              </maml:list>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.RasmanUnexpectedTerminatedMonitor -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.RasmanUnexpectedTerminatedMonitor" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>
+                The Remote Access Manager
+                (Rasman) service was unexpectedly terminated.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common
+                reasons for this error are: The
+                Remote Access Manager (Rasman) service crashed on the server.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>
+                Manually
+                start the Remote Access Manager (Rasman) service using services.msc
+                console.
+              </maml:para>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.RemoteAccessUnexpectedTerminatedMonitor" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Remote Access (RemoteAccess) service was unexpectedly terminated.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common
+                reasons for this error are: The
+                Remote Access (RemoteAccess) service crashed on
+                the server.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>
+                Manually
+                start the Remote Access (RemoteAccess) service using services.msc console.
+              </maml:para>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.ServiceMonitor -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.ServiceMonitor" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>
+                The Remote Access (RemoteAccess) service is not running.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>
+                The most common
+                reasons for this error are: The
+                Remote Access (RemoteAccess) service was not
+                started automatically during system boot-up.
+                The Remote Access (RemoteAccess) service was manually
+                stopped by the user.
+                The Remote Access (RemoteAccess) service crashed on
+                the server.
+              </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>
+                Change
+                the start-up type for Remote Access (RemoteAccess)
+                service to Automatic using services.msc console.
+                Manually start the Remote Access (RemoteAccess) service using services.msc console.
+              </maml:para>
+              <maml:para>Microsoft Corporation, all rights reserved</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

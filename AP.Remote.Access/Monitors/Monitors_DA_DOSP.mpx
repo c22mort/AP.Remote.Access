@@ -1,0 +1,873 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_BFE_DOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_BFE_DOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_BFE_DOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745793</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_DOSP_DOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_DOSP_DOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_DOSP_DOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745795</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_IKEEXT_DOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_IKEEXT_DOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_IKEEXT_DOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745794</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745792</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_DOS_ATTACK_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_DOS_ATTACK_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_DOS_ATTACK_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745796</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6 -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745800</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745801</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745802</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_MM_DOS_ATTACK_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_MM_DOS_ATTACK_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_MM_DOS_ATTACK_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745797</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_REPLAY_ATTACK_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_REPLAY_ATTACK_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_REPLAY_ATTACK_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745799</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_SPOOFING_ATTACK_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_SPOOFING_ATTACK_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_SPOOFING_ATTACK_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745798</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkSecurity" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DOSP_HEURISTIC_STATE_UTILIZATION_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_STATE_UTILIZATION_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DOSP_HEURISTIC_STATE_UTILIZATION_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Security</ComponentName>
+          <HeuristicId>2147745803</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION_AlertMessageResourceID" />
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN">
+          <Name>BFE service state</Name>
+          <Description>
+            Network security is not working as expected. The Base Filtering Engine (BFE) service has either been stopped, or is not responding. BFE is a service that manages firewall and IPsec policies, and implements user mode filtering.  Disabling the BFE service reduces system security, and IPsec management and firewall applications might not work as expected.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN" SubElementID="DA_DOSP_HEURISTIC_BFE_DOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN" SubElementID="DA_DOSP_HEURISTIC_BFE_DOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN" SubElementID="DA_DOSP_HEURISTIC_BFE_DOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN_AlertMessageResourceID">
+          <Name>BFE Service Down</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK">
+          <Name>DoS Attack Check</Name>
+          <Description>Check to verify if a DoS attack is underway</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK" SubElementID="DA_DOSP_HEURISTIC_DOS_ATTACK_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK" SubElementID="DA_DOSP_HEURISTIC_DOS_ATTACK_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK" SubElementID="DA_DOSP_HEURISTIC_DOS_ATTACK_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK_AlertMessageResourceID">
+          <Name>Potential DoS attack</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN">
+          <Name>IPSec Dosp state</Name>
+          <Description>Check for IPsec Denial of Service Protection (DoSP) is not enabled.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN" SubElementID="DA_DOSP_HEURISTIC_DOSP_DOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN" SubElementID="DA_DOSP_HEURISTIC_DOSP_DOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN" SubElementID="DA_DOSP_HEURISTIC_DOSP_DOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN_AlertMessageResourceID">
+          <Name>IP-Sec DoSP not enabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN">
+          <Name>IKEExt Service State</Name>
+          <Description>Network security is not working as expected. The IKE and AuthIP IPsec Keying Modules (IKEEXT) service was stopped, or is not responding.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN" SubElementID="DA_DOSP_HEURISTIC_IKEEXT_DOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN" SubElementID="DA_DOSP_HEURISTIC_IKEEXT_DOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN" SubElementID="DA_DOSP_HEURISTIC_IKEEXT_DOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN_AlertMessageResourceID">
+          <Name>IKEExt Service Down</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6 -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6">
+          <Name>ICMP Queue overflow</Name>
+          <Description>Network Security ICMP Queue Overflow Warning.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6_AlertMessageResourceID">
+          <Name>ICMP Queue Overflow</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH">
+          <Name>Inbound Rate Limit Discarded ICMPv6 Packets Per Sec Check</Name>
+          <Description>Network Security Queue Overflow Warning</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH_AlertMessageResourceID">
+          <Name>Inbound Rate Limit Discarded ICMPv6 Packets Per Sec</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH">
+          <Name>Inbound Rate Limit Discarded IPsec UnAuth Packets per sec</Name>
+          <Description>The Inbound Rate Limit Discarded IPv6 IPsec Unauthenticated Packets/sec counter has exceeded a defined threshold. View this counter under IPsec DOS Protection in Performance Monitor. This counter defines the rate at which unauthenticated IKEv1, IKEv2, AuthIP, or ESP IPv6 packets received on a public adapter were discarded because they exceeded the rate limit for IPv6 IPsec unauthenticated packets per second. An unauthenticated packet is an IPsec packet without an associated state entry. A state entry is a pair of IPv6 addresses that is authorized to pass through from a public to an internal adapter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH" SubElementID="DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH_AlertMessageResourceID">
+          <Name>Inbound Rate Limit Discarded IPsec UnAuth Packets Per sec</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK">
+          <Name>DoS Attack (MM)</Name>
+          <Description>A Denial of Service (DoS) attack  might be underway. IPv6 Main Mode negotiation failures have reached warning or critical levels.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK" SubElementID="DA_DOSP_HEURISTIC_MM_DOS_ATTACK_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK" SubElementID="DA_DOSP_HEURISTIC_MM_DOS_ATTACK_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK" SubElementID="DA_DOSP_HEURISTIC_MM_DOS_ATTACK_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK_AlertMessageResourceID">
+          <Name>Potential DoS Attack (MM)</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK">
+          <Name>Replay Attack Check</Name>
+          <Description>
+            A network security component is under a Replay attack. A Replay attack is a form of network attack in which a valid
+            data transmission is maliciously or fraudulently repeated or delayed.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK" SubElementID="DA_DOSP_HEURISTIC_REPLAY_ATTACK_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK" SubElementID="DA_DOSP_HEURISTIC_REPLAY_ATTACK_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK" SubElementID="DA_DOSP_HEURISTIC_REPLAY_ATTACK_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK_AlertMessageResourceID">
+          <Name>Potential Replay Attack</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK">
+          <Name>Spoofing Attack</Name>
+          <Description>A network security component is under a spoofing attack.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK" SubElementID="DA_DOSP_HEURISTIC_SPOOFING_ATTACK_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK" SubElementID="DA_DOSP_HEURISTIC_SPOOFING_ATTACK_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK" SubElementID="DA_DOSP_HEURISTIC_SPOOFING_ATTACK_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK_AlertMessageResourceID">
+          <Name>Potential Spoofing Attack</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION">
+          <Name>Current State Entries Utilization</Name>
+          <Description>The Current State Entries counter has exceeded critical levels. View this counter under IPsec DOS Protection in Performance Monitor. This counter defines the number of active state entries in the table. A state entry is a pair of IPv6 addresses that is authorized to pass through from a public to an internal adapter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION" SubElementID="DA_DOSP_HEURISTIC_STATE_UTILIZATION_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION" SubElementID="DA_DOSP_HEURISTIC_STATE_UTILIZATION_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION" SubElementID="DA_DOSP_HEURISTIC_STATE_UTILIZATION_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION_AlertMessageResourceID">
+          <Name>Current State Entries Utilization Critical</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN">
+          <Name>DOSP Unknown Error</Name>
+          <Description>DOSP Unknown Error</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN" SubElementID="DA_DOSP_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN" SubElementID="DA_DOSP_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN" SubElementID="DA_DOSP_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>DOSP Unknown Error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+        
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_BFE_DOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Network security is not working as expected. The Base Filtering Engine (BFE) service has either been stopped, or is not responding.BFE is a service that manages firewall and IPsec policies, and implements user mode filtering.  Disabling the BFE service reduces system security, and IPsec management and firewall applications might not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The Base Filtering Engine (BFE) has stopped.</maml:para>
+              <maml:para>2. The Base Filtering Engine (BFE) is not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>The service will start automatically, or it can be restarted manually.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_IKEEXT_DOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Network security is not working as expected. The IKE and AuthIP IPsec Keying Modules (IKEEXT) service was stopped, or is not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The IKEEXT service has stopped.</maml:para>
+              <maml:para>2. The IKEEXT service is not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>The service will start automatically, or it can be restarted manually.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOSP_DOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>IPsec Denial of Service Protection (DoSP) is not enabled.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>IPsec-DoSP is disabled.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Enable IPsec Denial of Service Protection (DoSP).</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_DOS_ATTACK" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A Denial of Service (DoS) attack  might be underway.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. IPsec has entered a DoS condition. This might indicate a DoS attack or a spike in the server load.</maml:para>
+              <maml:para>2. A high percentage of traffic was dropped because it failed security validation, and might constitute a potential attack on the server.</maml:para>
+              <maml:para>3. A large number of Security Associations (SAs) have failed negotiations.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>A Denial of Service (DoS) attack  might be underway. Take steps to mitigate the possible attack.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_MM_DOS_ATTACK" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A Denial of Service (DoS) attack  might be underway. IPv6 Main Mode negotiation failures have reached warning or critical levels.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>A large number of Security Associations (SAs) have failed negotiations.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Monitor packet drops and failed validations.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_SPOOFING_ATTACK" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A network security component is under a spoofing attack.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>A large number of packets with bad SPIs within a short amount of time might indicate a packet spoofing attack.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Monitor the server for signs of a spoofing attack. If an attack is detected, apply mitigation measures to stop it.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_REPLAY_ATTACK" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A network security component is under a Replay attack. A Replay attack is a form of network attack in which a valid data transmission is maliciously or fraudulently repeated or delayed.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The server is receiving a large number of packets that have failed Replay detection.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. A Replay attack might be underway. Monitor the server for signs of an attack. If an attack is detected, take mitigation measures to stop it.</maml:para>
+              <maml:para>2. Check for network errors as these will generate high counters.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6 -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_ICMPv6" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Network Security ICMP Queue Overflow Warning.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The Inbound Rate Limit Discarded ICMPv6 Packets/sec counter has exceeded a defined threshold. View this counter under IPsec DOS Protection in Performance Monitor.This counter specifies the rate at which ICMPv6 packets are received on a public adapter, and discarded because they exceeded the rate limit for ICMPv6 packets per second.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Monitor the server for signs of a spoofing attack.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_AUTH" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Network Security Queue Overflow Warning</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para> This might indicate a Denial of Service (DoS) attack or a spike in server load. The Inbound Rate Limit Discarded IPv6 IPsec Authenticated Packets/sec counter has exceeded a defined threshold. View this counter under IPsec DOS Protection in Performance Monitor. The counter specifies the rate at which authenticated IKEv1, IKEv2, AuthIP, or ESP IPv6 packets are received on a public adapter and discarded because they exceed the rate limit for IPv6 IPsec authenticated packets per second. An authenticated packet is an IPsec packet with an associated state entry. A state entry is a pair of IPv6 addresses that is authorized to pass through from a public to an internal adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Check the server for indications of an authenticated attack. If an attack is detected, use mitigation measures to stop it.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_INBOUND_RATE_LIMIT_IPSEC_UNAUTH" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Inbound Rate Limit Discarded IPv6 IPsec Unauthenticated Packets/sec counter has exceeded a defined threshold. View this counter under IPsec DOS Protection in Performance Monitor. This counter defines the rate at which unauthenticated IKEv1, IKEv2, AuthIP, or ESP IPv6 packets received on a public adapter were discarded because they exceeded the rate limit for IPv6 IPsec unauthenticated packets per second. An unauthenticated packet is an IPsec packet without an associated state entry. A state entry is a pair of IPv6 addresses that is authorized to pass through from a public to an internal adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Possible indication of a Denial of Service (DoS) attack or a spike in the server load.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Check the server for indications of an authenticated attack. If an attack is detected, use mitigation measures to stop it.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_STATE_UTILIZATION" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Current State Entries counter has exceeded critical levels. View this counter under IPsec DOS Protection in Performance Monitor. This counter defines the number of active state entries in the table. A state entry is a pair of IPv6 addresses that is authorized to pass through from a public to an internal adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The Current State Entries performance counter has exceeded critical levels. View this counter under IPsec DOS Protection in Performance Monitor.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Adjust the maximum number of active sessions defined on this server.Maxentries can range from 1 to 4294967295.To perform this procedure, you must have local administrator permissions.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DOSP_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown IPSec Error </maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Unknown</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

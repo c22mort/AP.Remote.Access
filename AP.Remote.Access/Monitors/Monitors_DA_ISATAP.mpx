@@ -1,0 +1,582 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_INTERFACE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_INTERFACE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_INTERFACE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614721</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_IPHLPSVC_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_IPHLPSVC_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_IPHLPSVC_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614726</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_FORWARDING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_FORWARDING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_FORWARDING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614724</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614725</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_ROUTE_ADV_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_ROUTE_ADV_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_ROUTE_ADV_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614722</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_ROUTE_PUB_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_ROUTE_PUB_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_ROUTE_PUB_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614723</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ISATAP" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_ISATAP_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_ISATAP_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Isatap</ComponentName>
+          <HeuristicId>2147614720</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- ISATAP Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ISATAP.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ISATAP" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ISATAP.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ISATAP" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ISATAP.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ISATAP" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ISATAP.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ISATAP" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING">
+          <Name>Isatap Adapter forwarding state</Name>
+          <Description>Forwarding is disabled on the ISATAP adapter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING" SubElementID="DA_ISATAP_HEURISTIC_FORWARDING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING" SubElementID="DA_ISATAP_HEURISTIC_FORWARDING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING" SubElementID="DA_ISATAP_HEURISTIC_FORWARDING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING_AlertMessageResourceID">
+          <Name>Isatap forwarding disabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH">
+          <Name>Isatap name publish state</Name>
+          <Description>The ISATAP server name cannot be resolved.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH" SubElementID="DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH" SubElementID="DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH" SubElementID="DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH_AlertMessageResourceID">
+          <Name>Isatap name resolution failed</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE">
+          <Name>ISATAP interface unavailable</Name>
+          <Description>ISATAP adapter is not available.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE" SubElementID="DA_ISATAP_HEURISTIC_INTERFACE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE" SubElementID="DA_ISATAP_HEURISTIC_INTERFACE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE" SubElementID="DA_ISATAP_HEURISTIC_INTERFACE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE_AlertMessageResourceID">
+          <Name>ISATAP Interface unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC">
+          <Name>Isatap - IP Helper Service State</Name>
+          <Description>The IP Helper service (iphlpsvc) has stopped, and DirectAccess might not work as expected.The IP Helper service provides tunnel connectivity using the connectivity platform, IPv6 transition technologies, and IP-HTTPS.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC" SubElementID="DA_ISATAP_HEURISTIC_IPHLPSVC_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC" SubElementID="DA_ISATAP_HEURISTIC_IPHLPSVC_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC" SubElementID="DA_ISATAP_HEURISTIC_IPHLPSVC_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC_AlertMessageResourceID">
+          <Name>Isatap - IP Helper Service Stopped</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV">
+          <Name>ISATAP Route Advertising</Name>
+          <Description>Route advertising is disabled on the ISATAP router.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV" SubElementID="DA_ISATAP_HEURISTIC_ROUTE_ADV_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV" SubElementID="DA_ISATAP_HEURISTIC_ROUTE_ADV_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV" SubElementID="DA_ISATAP_HEURISTIC_ROUTE_ADV_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV_AlertMessageResourceID">
+          <Name>ISATAP- Route advertising</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB">
+          <Name>ISATAP route publish</Name>
+          <Description>The ISATAP route is not published.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB" SubElementID="DA_ISATAP_HEURISTIC_ROUTE_PUB_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB" SubElementID="DA_ISATAP_HEURISTIC_ROUTE_PUB_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB" SubElementID="DA_ISATAP_HEURISTIC_ROUTE_PUB_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB_AlertMessageResourceID">
+          <Name>ISATAP route publish</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN">
+          <Name>Isatap Unknown Error</Name>
+          <Description>Catch all error for ISATAP</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN" SubElementID="DA_ISATAP_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN" SubElementID="DA_ISATAP_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN" SubElementID="DA_ISATAP_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Isatap Unknown Error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+
+        <!-- ISATAP Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ISATAP.AvailabilityRollup">
+          <Name>Direct Access Server from ISATAP Availability Health Rollup</Name>
+          <Description>Direct Access Server from ISATAP Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ISATAP.ConfigurationRollup">
+          <Name>Direct Access Server from ISATAP Configuration Health Rollup</Name>
+          <Description>Direct Access Server from ISATAP Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ISATAP.PerformanceRollup">
+          <Name>Direct Access Server from ISATAP Performance Health Rollup</Name>
+          <Description>Direct Access Server from ISATAP Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ISATAP.SecurityRollup">
+          <Name>Direct Access Server from ISATAP Security Health Rollup</Name>
+          <Description>Direct Access Server from ISATAP Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_INTERFACE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>ISATAP adapter is not available.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>ISATAP adapter is not available.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>ISATAP has been disabled.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_ADV" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Route advertising is disabled on the ISATAP router.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Routes are not advertised on the ISATAP router. This is required for DirectAccess to work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Enable advertising and the default route advertisement property on the ISATAP adapter.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_ROUTE_PUB" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The ISATAP route is not published.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The publish property of the ISATAP route has not been enabled. This required for DirectAccess to work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Set the publish property on the ISATAP route.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_FORWARDING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Forwarding is disabled on the ISATAP adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Forwarding is disabled on the ISATAP adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Enable the forwarding property on the ISATAP adapter.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_HOSTNAME_PUBLISH" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The ISATAP server name cannot be resolved.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The ISATAP server name has not been published.</maml:para>
+              <maml:para>2. The DNS server cannot be reached, or is unresponsive</maml:para>
+              <maml:para>3.  The ISATAP name might be in the DNS global query block list.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. The DNS server should be configured to resolve the ISATAP server name.</maml:para>
+              <maml:para>2. Ensure that the DNS server is configured to successfully resolve the ISATAP server name.</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_IPHLPSVC" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The IP Helper service (iphlpsvc) has stopped, and DirectAccess might not work as expected. The IP Helper service provides tunnel connectivity using the connectivity platform, IPv6 transition technologies, and IP-HTTPS.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The IP Helper service (iphlpsvc) has stopped.</maml:para>
+              <maml:para>2. The IP Helper service (iphlpsvc) is not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify that the service is running by typing 'Get-Service iphlpsvc' at a Windows PowerShell command prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service iphlpsvc) or restart (Restart-Service iphlpsvc) the service from an elevated PowerShell prompt.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_ISATAP_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown ISATAP Error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. The IP Helper service (iphlpsvc) has stopped.</maml:para>
+              <maml:para>2. The IP Helper service (iphlpsvc) is not responding.</maml:para>
+              <maml:para>3. The ISATAP server name has not been published.</maml:para>
+              <maml:para>4. The DNS server cannot be reached, or is unresponsive</maml:para>
+              <maml:para>5. The ISATAP name might be in the DNS global query block list.</maml:para>
+              <maml:para>6. Forwarding is disabled on the ISATAP adapter.</maml:para>
+              <maml:para>7. The publish property of the ISATAP route has not been enabled. This required for DirectAccess to work as expected.</maml:para>
+              <maml:para>8. Routes are not advertised on the ISATAP router. This is required for DirectAccess to work as expected.</maml:para>
+              <maml:para>9. ISATAP adapter is not available.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify that the service is running by typing 'Get-Service iphlpsvc' at a Windows PowerShell command prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service iphlpsvc) or restart (Restart-Service iphlpsvc) the service from an elevated PowerShell prompt.</maml:para>
+              <maml:para>3. The DNS server should be configured to resolve the ISATAP server name.</maml:para>
+              <maml:para>4. Ensure that the DNS server is configured to successfully resolve the ISATAP server name.</maml:para>
+              <maml:para>5. Enable the forwarding property on the ISATAP adapter.</maml:para>
+              <maml:para>6. Set the publish property on the ISATAP route.</maml:para>
+              <maml:para>7. Enable advertising and the default route advertisement property on the ISATAP adapter.</maml:para>
+              <maml:para>8. ISATAP has been disabled (Possibly not an Error).</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

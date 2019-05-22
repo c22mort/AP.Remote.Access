@@ -1,0 +1,110 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <ModuleTypes>
+      
+      <!-- AP.Remote.Access.RemoteAccessServer.Discovery.DataSource -->
+      <DataSourceModuleType ID="AP.Remote.Access.RemoteAccessServer.Discovery.DataSource" Accessibility="Public" Batching="false">
+        <Configuration>
+          <IncludeSchemaTypes>
+            <SchemaType>Windows!Microsoft.Windows.PowerShellSchema</SchemaType>
+          </IncludeSchemaTypes>
+          <xsd:element minOccurs="1" name="IntervalSeconds" type="xsd:integer"/>
+          <xsd:element minOccurs="1" name="SyncTime" type="xsd:string"/>
+          <xsd:element minOccurs="1" name="ComputerName" type="xsd:string"/>
+          <xsd:element minOccurs="1" name="CreateSingleSite" type="xsd:boolean"/>
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="IntervalSeconds" Selector="$Config/IntervalSeconds$" ParameterType="int"/>
+          <OverrideableParameter ID="SyncTime" Selector="$Config/SyncTime$" ParameterType="string"/>
+          <OverrideableParameter ID="CreateSingleSite" Selector="$Config/CreateSingleSite$" ParameterType="bool"/>
+        </OverrideableParameters>
+        <ModuleImplementation Isolation="Any">
+          <Composite>
+            <MemberModules>
+              <DataSource ID="Script" TypeID="Windows!Microsoft.Windows.TimedPowerShell.DiscoveryProvider">
+                <IntervalSeconds>$Config/IntervalSeconds$</IntervalSeconds>
+                <SyncTime>$Config/SyncTime$</SyncTime>
+                <ScriptName>Discover-RemoteAccess.ps1</ScriptName>
+                <ScriptBody>$IncludeFileContent/Scripts/Discover-RemoteAccess.ps1$</ScriptBody>
+                <Parameters>
+                  <Parameter>
+                    <Name>sourceId</Name>
+                    <Value>$MPElement$</Value>
+                  </Parameter>
+                  <Parameter>
+                    <Name>managedEntityId</Name>
+                    <Value>$Target/Id$</Value>
+                  </Parameter>
+                  <Parameter>
+                    <Name>computerName</Name>
+                    <Value>$Config/ComputerName$</Value>
+                  </Parameter>
+                  <Parameter>
+                    <Name>createSingleSite</Name>
+                    <Value>$Config/CreateSingleSite$</Value>
+                  </Parameter>
+                </Parameters>
+                <TimeoutSeconds>600</TimeoutSeconds>
+                <StrictErrorHandling>false</StrictErrorHandling>
+              </DataSource>
+            </MemberModules>
+            <Composition>
+              <Node ID="Script" />
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>System!System.Discovery.Data</OutputType>
+      </DataSourceModuleType>
+    </ModuleTypes>
+  </TypeDefinitions>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.RemoteAccessServer.Discovery.DataSource -->
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.Discovery.DataSource">
+          <Name>Remote Access Server Discovery DataSoure</Name>
+          <Description>Remote Access Server Discovery DataSoure</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.Discovery.DataSource" SubElementID="IntervalSeconds">
+          <Name>Interval Seconds</Name>
+          <Description>Frequency in seconds that module is run.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.Discovery.DataSource" SubElementID="SyncTime">
+          <Name>Synchronisation Time</Name>
+          <Description>Offset that this module is started from.</Description>
+        </DisplayString>
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Discovery.RemoteAcessServer.Seed -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Discovery.RemoteAcessServer.Seed">
+          <MamlContent>
+            <section xmlns="http://schemas.microsoft.com/maml/2004/10">
+              <title>Info.</title>
+              <para>
+                Seed Discovery for Remote Access Servers. Targets Windows Servers!
+              </para>
+            </section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Discovery.RemoteAccessServer -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Discovery.RemoteAccessServer">
+          <MamlContent>
+            <section xmlns="http://schemas.microsoft.com/maml/2004/10">
+              <title>Info.</title>
+              <para>
+                Remote Access Server and Component Discovery. Targets Remote Access Server Seed Class!
+              </para>
+            </section>
+          </MamlContent>
+        </KnowledgeArticle>
+        
+      </KnowledgeArticles>
+    </LanguagePack>
+      
+  </LanguagePacks>
+</ManagementPackFragment>

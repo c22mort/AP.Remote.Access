@@ -1,0 +1,421 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkAdapters" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Adapters</ComponentName>
+          <HeuristicId>2147483651</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkAdapters" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Adapters</ComponentName>
+          <HeuristicId>2147483652</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+ 
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkAdapters" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IF_HEURISTIC_NW_INTERFACE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IF_HEURISTIC_NW_INTERFACE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IF_HEURISTIC_NW_INTERFACE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Adapters</ComponentName>
+          <HeuristicId>2147483650</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkAdapters" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IF_HEURISTIC_ROUTES_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IF_HEURISTIC_ROUTES_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IF_HEURISTIC_ROUTES_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Adapters</ComponentName>
+          <HeuristicId>2147483649</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+  
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.NetworkAdapters" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_IF_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_IF_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_IF_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Network Adapters</ComponentName>
+          <HeuristicId>2147483648</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!--  Network Adapter Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkAdapters" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkAdapters" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkAdapters" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.NetworkAdapters" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+    
+      <DisplayStrings>
+        
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES">
+          <Name>Corporate network route publish</Name>
+          <Description>Corporate network route publish</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES" SubElementID="DA_IF_HEURISTIC_ROUTES_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES" SubElementID="DA_IF_HEURISTIC_ROUTES_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES" SubElementID="DA_IF_HEURISTIC_ROUTES_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES_AlertMessageResourceID">
+          <Name>Corporate network route publish</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT">
+          <Name>External adapter forwarding state</Name>
+          <Description>Forwarding is not enabled on the external adapter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT" SubElementID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT" SubElementID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT" SubElementID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT_AlertMessageResourceID">
+          <Name>External adapter forwarding state</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT">
+          <Name>Internal adapter forwarding state</Name>
+          <Description>Check if forwarding is disabled on the internal network adapter. This might prevent remote clients from accessing internal network resources.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT" SubElementID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT" SubElementID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT" SubElementID="DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT_AlertMessageResourceID">
+          <Name>Internal adapter forwarding disabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE">
+          <Name>Network Adapter State</Name>
+          <Description>The network adapters are either disconnected or disabled.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE" SubElementID="DA_IF_HEURISTIC_NW_INTERFACE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE" SubElementID="DA_IF_HEURISTIC_NW_INTERFACE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE" SubElementID="DA_IF_HEURISTIC_NW_INTERFACE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE_AlertMessageResourceID">
+          <Name>Network adapter disabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN">
+          <Name>Unknown Error</Name>
+          <Description>This monitor is a catch all for other errors</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN" SubElementID="DA_IF_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN" SubElementID="DA_IF_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN" SubElementID="DA_IF_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Unknown Error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!--  Network Adapter Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.AvailabilityRollup">
+          <Name>Direct Access Server from NetworkAdapters Availability Health Rollup</Name>
+          <Description>Direct Access Server from NetworkAdapters Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.ConfigurationRollup">
+          <Name>Direct Access Server from Network Adapters Configuration Health Rollup</Name>
+          <Description>Direct Access Server from Network Adapters Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.PerformanceRollup">
+          <Name>Direct Access Server from Network Adapters Performance Health Rollup</Name>
+          <Description>Direct Access Server from Network Adapters Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.NetworkAdapters.SecurityRollup">
+          <Name>Direct Access Server from Network Adapters Security Health Rollup</Name>
+          <Description>Direct Access Server from Network Adapters Security Health Rollup</Description>
+        </DisplayString>
+      
+      </DisplayStrings>
+      
+      <KnowledgeArticles>
+        
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_ROUTES" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess clients cannot connect to all resources on the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Routes required to send packets to the corporate network have not been published on adapter. These routes are required for remote clients to reach the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Publish the IPv6 routes on the network adapter that connects the server to the corporate network.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_EXT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Forwarding is not enabled on the external adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Forwarding is not enabled on the external adapter. This might prevent remote client traffic from reaching the internal network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Either the external network adapter has a domain profile (and the server is not configured with a single network adapter), or forwarding is not enabled on the external network adapter.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_FORWARDING_WEAKHOST_INT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Forwarding is disabled on the internal network adapter. This might prevent remote clients from accessing internal network resources</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Forwarding is disabled on the internal network adapter. This might prevent remote clients from accessing internal network resources.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Either VPN is configured but forwarding is disabled on the internal network adapter, or a native IPv6 network is deployed and forwarding is disabled.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_NW_INTERFACE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The network adapters are either disconnected or disabled.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The specified network adapters are not enabled.</maml:para>
+              <maml:para>2. The specified network adapters are not connected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Enable the network adapters using ncpa.cpl.</maml:para>
+              <maml:para>2. Verify network connectivity on the network adapters.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <!-- AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_IF_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown Network Adapter Error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. The specified network adapters are not enabled.</maml:para>
+              <maml:para>2. The specified network adapters are not connected.</maml:para>
+              <maml:para>3. Forwarding is disabled on the internal network adapter. This might prevent remote clients from accessing internal network resources.</maml:para>
+              <maml:para>4. Routes required to send packets to the corporate network have not been published on adapter. These routes are required for remote clients to reach the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Enable the network adapters using ncpa.cpl.</maml:para>
+              <maml:para>2. Verify network connectivity on the network adapters.</maml:para>
+              <maml:para>3. Either VPN is configured but forwarding is disabled on the internal network adapter, or a native IPv6 network is deployed and forwarding is disabled.</maml:para>
+              <maml:para>4. Publish the IPv6 routes on the network adapter that connects the server to the corporate network.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

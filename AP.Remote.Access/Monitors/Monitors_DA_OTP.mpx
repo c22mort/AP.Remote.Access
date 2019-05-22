@@ -1,0 +1,994 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_ANY_CA_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_ANY_CA_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_ANY_CA_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466694</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_ANY_RADIUS_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_ANY_RADIUS_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_ANY_RADIUS_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466691</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_AUTH_RUNNING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_AUTH_RUNNING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_AUTH_RUNNING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466689</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466695</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_CA_BAD_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_CA_BAD_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_CA_BAD_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466693</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_CA_GONE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_CA_GONE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_CA_GONE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466692</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_RADIUS_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_RADIUS_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CURRENT_RADIUS_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466690</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_EXCLUDED_USERS_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_EXCLUDED_USERS_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_EXCLUDED_USERS_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466697</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466696</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_ISAPI_SSL_STATE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_ISAPI_SSL_STATE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_ISAPI_SSL_STATE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466698</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466699</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Otp" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_OTP_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_OTP_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_OTP_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Otp</ComponentName>
+          <HeuristicId>2148466688</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- OTP Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Otp.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Otp" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Otp.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Otp" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Otp.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Otp" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Otp.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Otp" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA">
+          <Name>CA server reachability</Name>
+          <Description>A connection cannot be established to any of the CA servers from Remote Access server.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA" SubElementID="DA_OTP_HEURISTIC_ANY_CA_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA" SubElementID="DA_OTP_HEURISTIC_ANY_CA_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA" SubElementID="DA_OTP_HEURISTIC_ANY_CA_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA_AlertMessageResourceID">
+          <Name>CA server unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS">
+          <Name>Radius Server Connectivity</Name>
+          <Description>A connection cannot be established to any of the RADIUS servers from Remote Access server.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS" SubElementID="DA_OTP_HEURISTIC_ANY_RADIUS_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS" SubElementID="DA_OTP_HEURISTIC_ANY_RADIUS_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS" SubElementID="DA_OTP_HEURISTIC_ANY_RADIUS_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS_AlertMessageResourceID">
+          <Name>RADIUS server unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING">
+          <Name>OTP ISAPI extension state</Name>
+          <Description>The OTP authentication ISAPI extension has stopped, and DirectAccess cannot function as expected.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING" SubElementID="DA_OTP_HEURISTIC_AUTH_RUNNING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING" SubElementID="DA_OTP_HEURISTIC_AUTH_RUNNING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING" SubElementID="DA_OTP_HEURISTIC_AUTH_RUNNING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING_AlertMessageResourceID">
+          <Name>OTP ISAPI extension stopped</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD">
+          <Name>Otp Certificate template configuration</Name>
+          <Description>Otp Certificate template configuration</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD" SubElementID="DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD" SubElementID="DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD" SubElementID="DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD_AlertMessageResourceID">
+          <Name>Certificate template misconfiguration</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE">
+          <Name>Certificate template availability</Name>
+          <Description>Certificate template availability</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE" SubElementID="DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE" SubElementID="DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE" SubElementID="DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE_AlertMessageResourceID">
+          <Name>Certificate template unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD">
+          <Name>CA server configuration state</Name>
+          <Description>A CA server used for OTP authentication is configured incorrectly.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD" SubElementID="DA_OTP_HEURISTIC_CURRENT_CA_BAD_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD" SubElementID="DA_OTP_HEURISTIC_CURRENT_CA_BAD_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD" SubElementID="DA_OTP_HEURISTIC_CURRENT_CA_BAD_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD_AlertMessageResourceID">
+          <Name>CA server configuration error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE">
+          <Name>CA server availability</Name>
+          <Description>A connection cannot be established to CA a server used for OTP authentication.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE" SubElementID="DA_OTP_HEURISTIC_CURRENT_CA_GONE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE" SubElementID="DA_OTP_HEURISTIC_CURRENT_CA_GONE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE" SubElementID="DA_OTP_HEURISTIC_CURRENT_CA_GONE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE_AlertMessageResourceID">
+          <Name>CA server unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS">
+          <Name>RADIUS server availability</Name>
+          <Description>
+            A connection to a RADIUS server configured for OTP authentication cannot be established.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS" SubElementID="DA_OTP_HEURISTIC_CURRENT_RADIUS_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS" SubElementID="DA_OTP_HEURISTIC_CURRENT_RADIUS_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS" SubElementID="DA_OTP_HEURISTIC_CURRENT_RADIUS_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS_AlertMessageResourceID">
+          <Name>RADIUS server unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS">
+          <Name>OTP exemption state</Name>
+          <Description>The security group defined for users exempt from two-factor authentication does not exist</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS" SubElementID="DA_OTP_HEURISTIC_EXCLUDED_USERS_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS" SubElementID="DA_OTP_HEURISTIC_EXCLUDED_USERS_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS" SubElementID="DA_OTP_HEURISTIC_EXCLUDED_USERS_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS_AlertMessageResourceID">
+          <Name>OTP two factor auth user exempt SG not found</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE">
+          <Name>OTP ISAPI SSL state</Name>
+          <Description>The OTP authentication ISAPI extension is not configured correctly, and DirectAccess cannot function as expected.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE" SubElementID="DA_OTP_HEURISTIC_ISAPI_SSL_STATE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE" SubElementID="DA_OTP_HEURISTIC_ISAPI_SSL_STATE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE" SubElementID="DA_OTP_HEURISTIC_ISAPI_SSL_STATE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE_AlertMessageResourceID">
+          <Name>OTP ISAPI extension misconfigured</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD">
+          <Name>OTP signing certificate configuration</Name>
+          <Description>The OTP signing certificate is missing or configured incorrectly.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD" SubElementID="DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD" SubElementID="DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD" SubElementID="DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD_AlertMessageResourceID">
+          <Name>OTP signing certificate misconfigured</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN">
+          <Name>Unknown OTP error</Name>
+          <Description>Unknown OTP error</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN" SubElementID="DA_OTP_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN" SubElementID="DA_OTP_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN" SubElementID="DA_OTP_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Otp unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- OTP Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Otp.AvailabilityRollup">
+          <Name>Direct Access Server from Otp Availability Health Rollup</Name>
+          <Description>Direct Access Server from Otp Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Otp.ConfigurationRollup">
+          <Name>Direct Access Server from Otp Configuration Health Rollup</Name>
+          <Description>Direct Access Server from Otp Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Otp.PerformanceRollup">
+          <Name>Direct Access Server from Otp Performance Health Rollup</Name>
+          <Description>Direct Access Server from Otp Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Otp.SecurityRollup">
+          <Name>Direct Access Server from Otp Security Health Rollup</Name>
+          <Description>Direct Access Server from Otp Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_AUTH_RUNNING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The OTP authentication ISAPI extension has stopped, and DirectAccess cannot function as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. OTP is configured incorrectly on the Remote Access server.</maml:para>
+              <maml:para>2. IIS is not running on the Remote Access server.</maml:para>
+              <maml:para>3. ISAPI is not installed on the Remote Access server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Check for relevant errors in the Windows Event Viewer.</maml:para>
+              <maml:para>2. Ensure that OTP is configured correctly in the Remote Access Management console.</maml:para>
+              <maml:para>3. Apply DirectAccess policy with OTP disabled and then enable OTP again.</maml:para>
+              <maml:para>4. Verify that OTP settings have been activated on the Remote Access server.</maml:para>
+              <maml:para>5. Ensure that IIS is installed and running.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_RADIUS" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A connection to the RADIUS server configured for OTP authentication cannot be established.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The RADIUS server cannot be reached</maml:para>
+              <maml:para>2. The port on the RADIUS server has been modified.</maml:para>
+              <maml:para>3. The shared secret specified on the Remote Access server does not match the secret specified on the RADIUS server.</maml:para>
+              <maml:para>4. The RADIUS server is busy.</maml:para>
+              <maml:para>5. There is a connection error with the RADIUS server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Check connectivity to the RADIUS server.</maml:para>
+              <maml:para>2. Verify RADIUS settings and traffic issues.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_RADIUS" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A connection cannot be established to any of the RADIUS servers from Remote Access server</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>All RADIUS servers are in one of the following states:</maml:para>
+              <maml:para>1. RADIUS server cannot be reached.</maml:para>
+              <maml:para>2. The port on the RADIUS server has been modified.</maml:para>
+              <maml:para>3. The shared secret specified on the Remote Access server does not match the secret specified on the RADIUS server.</maml:para>
+              <maml:para>4. The RADIUS server is busy.</maml:para>
+              <maml:para>5. There is a connection error with the RADIUS server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Check connectivity to the RADIUS server.</maml:para>
+              <maml:para>2. Verify RADIUS settings and traffic issues.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_GONE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A connection cannot be established to CA server used for OTP authentication.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The CA server cannot be reached.</maml:para>
+              <maml:para>2. The CA server is busy with previous requests.</maml:para>
+              <maml:para>3. There is a connection issue with the CA server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify network connectivity to the CA server.</maml:para>
+              <maml:para>2. Verify CA server settings.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CURRENT_CA_BAD" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>CA server used for OTP authentication is configured incorrectly.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The CA server is not an enterprise CA.</maml:para>
+              <maml:para>2. The CA server cannot enroll the requested certificate.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify network connectivity to the CA server.</maml:para>
+              <maml:para>2. Contact the CA server administrator.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ANY_CA" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A connection cannot be established to any of the CA servers from Remote Access server</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>All CA servers are in one of the following states:</maml:para>
+              <maml:para>1. CA server cannot be reached.</maml:para>
+              <maml:para>2. CA server is busy with previous requests.</maml:para>
+              <maml:para>3. General communication error with CA.</maml:para>
+              <maml:para>4. The CA server is not an enterprise CA.</maml:para>
+              <maml:para>5. The CA server cannot enroll the requested certificate.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify network connectivity to the CA server.</maml:para>
+              <maml:para>2. Verify CA server settings.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_GONE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>1. Certificate template configured for OTP authentication cannot be reached.</maml:para>
+              <maml:para>2. Certificate template used for OTP authentication is configured incorrectly.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The certificate template was deleted or renamed.</maml:para>
+              <maml:para>2. The Remote Access server does not have the required permissions to enroll the certificate template.</maml:para>
+              <maml:para>3. The DirectAccess user does not have the required read permissions for the certificate template.</maml:para>
+              <maml:para>4. The certificate template is not suitable for issuing OTP certificates. Possible causes:</maml:para>
+              <maml:para>a. Enhanced key usage is not smart card logon.</maml:para>
+              <maml:para>b. Key usage is not digital signature.</maml:para>
+              <maml:para>c. Validity period exceeds four hours.</maml:para>
+              <maml:para>d. Subject name is not set to be supplied in the request.</maml:para>
+              <maml:para>5. The certificate template is misconfigured.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the certificate template exists on the domain controller.</maml:para>
+              <maml:para>2. Ensure that Remote Access server has read and enrollment permissions for the certificate template.</maml:para>
+              <maml:para>3. Ensure that DirectAccess users have read permissions for the certificate template</maml:para>
+              <maml:para>4. Ensure that the certificate template name is configured correctly in the Remote Access Setup Wizard.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_CERT_TEMPLATE_BAD" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Certificate template used for OTP authentication is configured incorrectly.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The Remote Access server does not have the required permissions to enroll the certificate template.</maml:para>
+              <maml:para>2. The DirectAccess user does not have the required read permissions for the certificate template.</maml:para>
+              <maml:para>3. The certificate template is not suitable for issuing OTP certificates. Possible causes:</maml:para>
+              <maml:para>a. Enhanced key usage is not smart card logon.</maml:para>
+              <maml:para>b. Key usage is not digital signature.</maml:para>
+              <maml:para>c. Validity period exceeds four hours.</maml:para>
+              <maml:para>d. Subject name is not set to be supplied in the request.</maml:para>
+              <maml:para>4. The certificate template is misconfigured.</maml:para>
+              <maml:para>5. Certificate template is not enabled on one or more CA servers.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that Remote Access server has read and enrollment permissions for the certificate template.</maml:para>
+              <maml:para>2. Ensure that DirectAccess users have read permissions for the certificate template</maml:para>
+              <maml:para>3. Ensure that the certificate template name is configured correctly in the Remote Access Setup Wizard.</maml:para>
+              <maml:para>4. Check that the certificate template is enabled on all CA servers used for OTP authentication.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_EXCLUDED_USERS" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The security group defined for users exempt from two-factor authentication does not exist.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The security group was deleted or renamed.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the security group exists in Active Directory.</maml:para>
+              <maml:para>2. If the security group was renamed, modify Remote Access server settings accordingly.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_ISAPI_SSL_STATE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The OTP authentication ISAPI extension is not configured correctly, and DirectAccess cannot function as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. OTP is configured incorrectly on the Remote Access server.</maml:para>
+              <maml:para>2. IIS is not running on the Remote Access server.</maml:para>
+              <maml:para>3. ISAPI is not installed on the Remote Access server.</maml:para>
+              <maml:para>4. ISAPI extension is not configured correctly</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Check for relevant errors in the Windows Event Viewer.</maml:para>
+              <maml:para>2. Ensure that OTP is configured correctly in the Remote Access Management console.</maml:para>
+              <maml:para>3. Apply DirectAccess policy with OTP disabled and then enable OTP again.</maml:para>
+              <maml:para>4. Verify that OTP settings have been activated on the Remote Access server.</maml:para>
+              <maml:para>5. Ensure that IIS is installed and running.</maml:para>
+              <maml:para>6. In a browser, type to verify that the ISAPI extension application page opens correctly.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_OTP_SIGN_CERT_TEMPLATE_BAD" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>An OTP signing certificate cannot be located on the Remote Access server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The OTP signing certificate cannot be enrolled by the Remote Access server from certificate template.</maml:para>
+              <maml:para>2. The OTP signing certificate cannot be renewed by the Remote Access server.</maml:para>
+              <maml:para>3. The OTP signing certificate does not have the required EKU</maml:para>
+              <maml:para>4. The OTP ISAPI extension does not have permissions to use the OTP signing certificate.</maml:para>
+              <maml:para>5. The OTP signing certificate has expired.</maml:para>
+              <maml:para>6. The OTP signing certificate has been revoked.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure the certificate template for issuing the OTP signing certificate exists and is configured correctly.</maml:para>
+              <maml:para>2. Enroll the OTP signing certificate manually from the Remote Access server.</maml:para>
+              <maml:para>3. Ensure that OTP is configured correctly in the Remote Access Management console.</maml:para>
+              <maml:para>4. Apply DirectAccess policy with OTP disabled and then enable OTP again.</maml:para>
+              <maml:para>5. Ensure that activation of OTP configuration settings succeeded.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_OTP_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown OTP Error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. Issues with the OTP signing certificate.</maml:para>
+              <maml:para>2. Issues with ISAPI.</maml:para>
+              <maml:para>3. Issues with OTP Security Group.</maml:para>
+              <maml:para>4. CA server cannot be reached.</maml:para>
+              <maml:para>5. Issues with RADIUS server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Check OTP Certificate and Certificate Template.</maml:para>
+              <maml:para>2. Check ISAPI is installed and correctly configured.</maml:para>
+              <maml:para>3. Ensure that the security group exists in Active Directory, and has not been incorrectly modified.</maml:para>
+              <maml:para>4. Verify network connectivity to the CA server, and CA settings.</maml:para>
+              <maml:para>5. Check connectivity to the RADIUS server, and RADIUS Server settings.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+      </KnowledgeArticles>
+    
+  </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

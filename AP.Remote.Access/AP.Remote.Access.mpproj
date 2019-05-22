@@ -5,7 +5,7 @@
     <RootNamespace>AP.Remote.Access</RootNamespace>
     <Name>AP.Remote.Access</Name>
     <ManagementPackName>AP.Remote.Access</ManagementPackName>
-    <Version>1.0.0.0</Version>
+    <Version>19.5.5.0</Version>
     <MpFrameworkVersion>v7.0.2</MpFrameworkVersion>
     <MpFrameworkProfile>OM</MpFrameworkProfile>
     <ProductVersion>1.1.0.0</ProductVersion>
@@ -13,11 +13,11 @@
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug\</OutputPath>
-    <GenerateSealed>false</GenerateSealed>
-    <Company>MyCompany</Company>
-    <Copyright>Copyright (c) MyCompany. All rights reserved.</Copyright>
-    <DelaySigning>false</DelaySigning>
-    <AssemblyOriginatorKeyFile />
+    <GenerateSealed>True</GenerateSealed>
+    <Company>AP Management Packs</Company>
+    <Copyright>Copyright (c) AP Management Packs. All rights reserved.</Copyright>
+    <DelaySigning>False</DelaySigning>
+    <AssemblyOriginatorKeyFile>C:\VSAE\AP.Remote.Access\key.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
     <DebugSymbols>false</DebugSymbols>
@@ -29,9 +29,21 @@
     <AssemblyOriginatorKeyFile />
   </PropertyGroup>
   <ItemGroup>
+    <ManagementPackReference Include="Microsoft.SystemCenter.DataWarehouse.Library">
+      <HintPath>C:\Program Files (x86)\System Center Visual Studio Authoring Extensions\References\OM2012R2\Microsoft.SystemCenter.DataWarehouse.Library.mp</HintPath>
+      <Alias>DataWarehouse</Alias>
+      <MinVersion>7.1.10226.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
     <ManagementPackReference Include="Microsoft.SystemCenter.Library">
-      <Alias>SC</Alias>
-      <PackageToBundle>false</PackageToBundle>
+      <Alias>SystemCenter</Alias>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+    <ManagementPackReference Include="Microsoft.SystemCenter.ServiceDesigner.Library">
+      <HintPath>C:\Program Files (x86)\System Center Visual Studio Authoring Extensions\References\OM2012R2\Microsoft.SystemCenter.ServiceDesigner.Library.mp</HintPath>
+      <Alias>ServiceDesigner</Alias>
+      <MinVersion>7.0.8433.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
     </ManagementPackReference>
     <ManagementPackReference Include="Microsoft.Windows.Library">
       <Alias>Windows</Alias>
@@ -49,6 +61,116 @@
       <Alias>Visualization</Alias>
       <PackageToBundle>false</PackageToBundle>
     </ManagementPackReference>
+    <ManagementPackReference Include="System.Performance.Library">
+      <HintPath>C:\Program Files (x86)\System Center Visual Studio Authoring Extensions\References\OM2012R2\System.Performance.Library.mp</HintPath>
+      <Alias>Performance</Alias>
+      <MinVersion>7.0.8433.0</MinVersion>
+      <PackageToBundle>False</PackageToBundle>
+    </ManagementPackReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Classes.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataSources\DataSource.Discovery.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DataSources\DataSource.RemoteAccessHealth.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Discoveries\Discoveries.mptg.mpx">
+      <SubType>Code</SubType>
+      <DependentUpon>Discoveries\Discoveries.mptg</DependentUpon>
+    </Compile>
+    <Compile Include="LanguagePack.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Dependancies.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors.VPNServer.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_6to4.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_DNS.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_DNS64.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_DomainController.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_DOSP.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_HighAvailability.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_IPHTTPS.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_IPSec.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_ISATAP.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_Kerberos.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_ManagementServers.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_NAT64.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_NetworkAdapters.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_NetworkLocationServers.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_OTP.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_Services.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Monitors\Monitors_DA_Teredo.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Presentation\ViewsAndFolders.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Rules\Rules_VPNServer.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="SecureReference\SecureReference.mpx">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Classes" />
+    <Folder Include="Discoveries" />
+    <Folder Include="DataSources" />
+    <Folder Include="Monitors" />
+    <Folder Include="Rules" />
+    <Folder Include="Presentation" />
+    <Folder Include="Scripts" />
+    <Folder Include="SecureReference" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Discoveries\Discoveries.mptg">
+      <SubType>Content</SubType>
+      <Generator>FragmentGenerator</Generator>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Scripts\Discover-RemoteAccess.ps1" />
+    <EmbeddedResource Include="Scripts\Get-RemoteAccessHealthInfo.ps1" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\VSAC\Microsoft.SystemCenter.OperationsManager.targets" />
 </Project>

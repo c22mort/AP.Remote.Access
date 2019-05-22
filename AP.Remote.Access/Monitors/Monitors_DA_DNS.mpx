@@ -1,0 +1,353 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns</ComponentName>
+          <HeuristicId>2147811331</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns</ComponentName>
+          <HeuristicId>2147811328</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS_HEURISTIC_UNREACHABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS_HEURISTIC_UNREACHABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS_HEURISTIC_UNREACHABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns</ComponentName>
+          <HeuristicId>2147811329</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE -->
+      <UnitMonitor ID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns</ComponentName>
+          <HeuristicId>2147811330</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- DNS Roll Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE -->
+      <StringResource ID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE">
+          <Name>All DNS Unresponsive</Name>
+          <Description>All DNS Servers used by DA for name resolution are unresponsive</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE" SubElementID="DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE" SubElementID="DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE" SubElementID="DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_Success">
+          <Name>Success</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE_AlertMessageResourceID">
+          <Name>All Dns Unresponsive</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN">
+          <Name>DNS - Unknown Error</Name>
+          <Description>Unknown error occured with DNS infra</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN" SubElementID="DA_DNS_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN" SubElementID="DA_DNS_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN" SubElementID="DA_DNS_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>DNS - Unknown Error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE">
+          <Name>DNS Unreachable</Name>
+          <Description>Some DNS Servers used by DA for name resolution are not responding</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE" SubElementID="DA_DNS_HEURISTIC_UNREACHABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE" SubElementID="DA_DNS_HEURISTIC_UNREACHABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE" SubElementID="DA_DNS_HEURISTIC_UNREACHABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE_AlertMessageResourceID">
+          <Name>DNS unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE -->
+        <DisplayString ElementID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE">
+          <Name>DNS Unresponsive</Name>
+          <Description>Some Enterprize DNS servers used by DA for Name resolution are unresponsive</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE" SubElementID="DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE" SubElementID="DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE" SubElementID="DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE_AlertMessageResourceID">
+          <Name>Some Dns servers unresponsive</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- DNS Roll Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS.AvailabilityRollup">
+          <Name>Direct Access Server from DNS Availability Health Rollup</Name>
+          <Description>Direct Access Server from DNS Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS.ConfigurationRollup">
+          <Name>Direct Access Server from DNS Configuration Health Rollup</Name>
+          <Description>Direct Access Server from DNS Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS.PerformanceRollup">
+          <Name>Direct Access Server from DNS Performance Health Rollup</Name>
+          <Description>Direct Access Server from DNS Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS.SecurityRollup">
+          <Name>Direct Access Server from DNS Security Health Rollup</Name>
+          <Description>Direct Access Server from DNS Security Health Rollup</Description>
+        </DisplayString>
+        
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_ALL_UNRESPONSIVE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>None of the enterprise DNS servers used by DirectAccess clients for name resolution are responding. This might affect DirectAccess client connectivity to corporate resources.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Enterprise DNS servers are not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure DNS servers are online and responding to name resolution requests.</maml:para>
+              <maml:para>2. Verify DNS server settings.</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown DNS Error reported by servers used by DirectAccess clients for name resolution. This might affect DirectAccess client connectivity to corporate resources.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Unknown.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure DNS servers are online and responding to name resolution requests.</maml:para>
+              <maml:para>2. Verify DNS server settings.</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNREACHABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>One or more enterprise DNS servers used by DirectAccess clients for name resolution are not available.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. Enterprise DNS servers are not available.</maml:para>
+              <maml:para>2. ICMP is disabled on enterprise DNS servers</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify network connectivity to DNS servers.</maml:para>
+              <maml:para>2. Ensure DNS servers are online and responding to name resolution requests.</maml:para>
+              <maml:para>3. Verify DNS server settings.</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.DA_DNS_HEURISTIC_SOME_UNRESPONSIVE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Enterprise DNS servers used by DirectAccess clients for name resolution are not responding. This might affect DirectAccess client connectivity to corporate resources.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. One or more of the enterprise DNS servers are not responding. </maml:para>
+              <maml:para>2. Enterprise DNS servers might be incorrectly configured or overloaded.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure DNS servers are online and responding to name resolution requests.</maml:para>
+              <maml:para>2. Verify DNS server settings.</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

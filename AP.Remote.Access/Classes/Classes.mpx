@@ -1,0 +1,499 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <EntityTypes>
+      <ClassTypes>
+
+        <!-- AP.Remote.Access.Class.6to4 -->
+        <ClassType ID="AP.Remote.Access.Class.6to4" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.DirectAccessServer -->
+        <ClassType ID="AP.Remote.Access.Class.DirectAccessServer" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.DNS -->
+        <ClassType ID="AP.Remote.Access.Class.DNS" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.DNS64 -->
+        <ClassType ID="AP.Remote.Access.Class.DNS64" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.DomainController -->
+        <ClassType ID="AP.Remote.Access.Class.DomainController" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.HighAvailability -->
+        <ClassType ID="AP.Remote.Access.Class.HighAvailability" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.IPHTTPS -->
+        <ClassType ID="AP.Remote.Access.Class.IPHTTPS" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.IPSec -->
+        <ClassType ID="AP.Remote.Access.Class.IPSec" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.ISATAP -->
+        <ClassType ID="AP.Remote.Access.Class.ISATAP" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.Kerberos -->
+        <ClassType ID="AP.Remote.Access.Class.Kerberos" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.ManagementServers -->
+        <ClassType ID="AP.Remote.Access.Class.ManagementServers" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.MicrosoftRemoteAccess -->
+        <ClassType ID="AP.Remote.Access.Class.MicrosoftRemoteAccess" Accessibility="Public" Abstract="false" Base="System!System.Service" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="ApplicationName" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+        <!-- AP.Remote.Access.Class.NAT64 -->
+        <ClassType ID="AP.Remote.Access.Class.NAT64" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.NetworkAdapters -->
+        <ClassType ID="AP.Remote.Access.Class.NetworkAdapters" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.NetworkLocationServer -->
+        <ClassType ID="AP.Remote.Access.Class.NetworkLocationServer" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.NetworkSecurity -->
+        <ClassType ID="AP.Remote.Access.Class.NetworkSecurity" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.Otp -->
+        <ClassType ID="AP.Remote.Access.Class.Otp" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.RemoteAccessServer -->
+        <ClassType ID="AP.Remote.Access.Class.RemoteAccessServer" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ComputerRole" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.RemoteAccessServer.Seed -->
+        <ClassType ID="AP.Remote.Access.Class.RemoteAccessServer.Seed" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.LocalApplication" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.RemoteAccessSite -->
+        <ClassType ID="AP.Remote.Access.Class.RemoteAccessSite" Accessibility="Public" Abstract="false" Base="ServiceDesigner!Microsoft.SystemCenter.ServiceDesigner.ServiceComponentGroup" Hosted="false" Singleton="false" Extension="false">
+          <Property ID="ApplicationName" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+          <Property ID="ContainerName" Type="string" AutoIncrement="false" Key="true" CaseSensitive="false" MaxLength="256" MinLength="0" Required="false" Scale="0" />
+        </ClassType>
+        <!-- AP.Remote.Access.Class.Services -->
+        <ClassType ID="AP.Remote.Access.Class.Services" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.Teredo -->
+        <ClassType ID="AP.Remote.Access.Class.Teredo" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+        <!-- AP.Remote.Access.Class.VPNServer -->
+        <ClassType ID="AP.Remote.Access.Class.VPNServer" Accessibility="Public" Abstract="false" Base="Windows!Microsoft.Windows.ApplicationComponent" Hosted="true" Singleton="false" Extension="false" />
+      </ClassTypes>
+      <RelationshipTypes>
+        <RelationshipType ID="DirectAccessServer.Hosts.6to4" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.6to4" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.DNS" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DNS" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.DNS64" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DNS64" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.DomainController" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DomainController" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.HighAvailability" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.HighAvailability" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.IPHTTPS" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.IPHTTPS" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.IPSec" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.IPSec" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.ISATAP" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.ISATAP" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.Kerberos" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.Kerberos" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.ManagementServers" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.ManagementServers" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.NAT64" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.NAT64" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.NetworkAdapters" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.NetworkAdapters" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.NetworkLocationServer" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.NetworkLocationServer" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.NetworkSecurity" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.NetworkSecurity" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.Otp" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.Otp" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.Services" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.Services" />
+        </RelationshipType>
+        <RelationshipType ID="DirectAccessServer.Hosts.Teredo" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.Teredo" />
+        </RelationshipType>
+        <RelationshipType ID="MicrosoftRemoteAccess.Contains.RemoteAccessSite" Accessibility="Public" Abstract="false" Base="System!System.Containment">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.MicrosoftRemoteAccess" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.RemoteAccessSite" />
+        </RelationshipType>
+        <RelationshipType ID="RemoteAccessServer.Hosts.DirectAccessServer" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.RemoteAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.DirectAccessServer" />
+        </RelationshipType>
+        <RelationshipType ID="RemoteAccessServer.Hosts.VPNServer" Accessibility="Public" Abstract="false" Base="System!System.Hosting">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.RemoteAccessServer" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.VPNServer" />
+        </RelationshipType>
+        <RelationshipType ID="RemoteAccessSite.Contains.RemoteAccessServer" Accessibility="Public" Abstract="false" Base="System!System.Containment">
+          <Source ID="Source" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.RemoteAccessSite" />
+          <Target ID="Target" MinCardinality="0" MaxCardinality="2147483647" Type="AP.Remote.Access.Class.RemoteAccessServer" />
+        </RelationshipType>
+      </RelationshipTypes>
+
+    </EntityTypes>
+  </TypeDefinitions>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+
+        <DisplayString ElementID="AP.Remote.Access.Class.6to4">
+          <Name>6to4</Name>
+          <Description>6to4</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.DirectAccessServer">
+          <Name>Direct Access Server</Name>
+          <Description>Direct Access Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.DNS">
+          <Name>DNS</Name>
+          <Description>DNS</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.DNS64">
+          <Name>DNS64</Name>
+          <Description>DNS64</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.DomainController">
+          <Name>Domain Controller</Name>
+          <Description>Domain Controller</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.HighAvailability">
+          <Name>High Availability</Name>
+          <Description>This class represents Network Load Balancing</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.IPHTTPS">
+          <Name>IP-HTTPS</Name>
+          <Description>IP-HTTPS</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.IPSec">
+          <Name>IPSec</Name>
+          <Description>IPSec</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.ISATAP">
+          <Name>ISATAP</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.Kerberos">
+          <Name>Kerberos</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.ManagementServers">
+          <Name>Management Servers</Name>
+          <Description>Management Servers</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.MicrosoftRemoteAccess">
+          <Name>Microsoft Remote Access</Name>
+          <Description>Microsoft Remote Access</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.MicrosoftRemoteAccess" SubElementID="ApplicationName">
+          <Name>Application Name</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.NAT64">
+          <Name>NAT64</Name>
+          <Description>NAT64</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.NetworkAdapters">
+          <Name>Network Adapters</Name>
+          <Description>Network Adapters</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.NetworkLocationServer">
+          <Name>Network Location Server</Name>
+          <Description>Network Location Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.NetworkSecurity">
+          <Name>Network Security</Name>
+          <Description>Network Security</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.Otp">
+          <Name>Otp</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.RemoteAccessServer">
+          <Name>Remote Access Server</Name>
+          <Description>Remote Access Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.RemoteAccessServer.Seed">
+          <Name>Remote Access Server Seed</Name>
+          <Description>Remote Access Server Seed</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.RemoteAccessSite">
+          <Name>Remote Access Site</Name>
+          <Description>Remote Access Site</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.RemoteAccessSite" SubElementID="ApplicationName">
+          <Name>Application Name</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.RemoteAccessSite" SubElementID="ContainerName">
+          <Name>Container Name</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.Services">
+          <Name>Services</Name>
+          <Description>Services</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.Teredo">
+          <Name>Teredo</Name>
+          <Description>Teredo</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Class.VPNServer">
+          <Name>VPN Server</Name>
+          <Description>VPN Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="RemoteAccessServer.Hosts.DirectAccessServer">
+          <Name>Remote Access Server Hosts Direct Access Server</Name>
+          <Description>Remote Access Server Hosts Direct Access Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="RemoteAccessServer.Hosts.VPNServer">
+          <Name>Remote Access Server Hosts VPN Server</Name>
+          <Description>Remote Access Server Hosts VPN Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="MicrosoftRemoteAccess.Contains.RemoteAccessSite">
+          <Name>Microsoft Remote Access Contains Remote Access Site</Name>
+          <Description>Microsoft Remote Access Contains Remote Access Site</Description>
+        </DisplayString>
+        <DisplayString ElementID="RemoteAccessSite.Contains.RemoteAccessServer">
+          <Name>Remote Access Site Contains Remote Access Server</Name>
+          <Description>Remote Access Site Contains Remote Access Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.6to4">
+          <Name>Direct Access Server Hosts 6to4</Name>
+          <Description>Direct Access Server Hosts 6to4</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.DNS">
+          <Name>Direct Access Server Hosts DNS</Name>
+          <Description>Direct Access Server Hosts DNS</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.DNS64">
+          <Name>Direct Access Server Hosts DNS64</Name>
+          <Description>Direct Access Server Hosts DNS64</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.DomainController">
+          <Name>Direct Access Server Hosts DomainController</Name>
+          <Description>Direct Access Server Hosts DomainController</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.HighAvailability">
+          <Name>Direct Access Server Hosts High Availability</Name>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.IPHTTPS">
+          <Name>Direct Access Server Hosts IP-HTTPS</Name>
+          <Description>Direct Access Server Hosts IP-HTTPS</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.IPSec">
+          <Name>Direct Access Server Hosts IPSec</Name>
+          <Description>Direct Access Server Hosts IPSec</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.ISATAP">
+          <Name>Direct Access Server Hosts ISATAP</Name>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.Kerberos">
+          <Name>Direct Access Server Hosts Kerberos</Name>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.ManagementServers">
+          <Name>Direct Access Server Hosts ManagementServers</Name>
+          <Description>Direct Access Server Hosts ManagementServers</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.NAT64">
+          <Name>Direct Access Server Hosts NAT64</Name>
+          <Description>Direct Access Server Hosts NAT64</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.NetworkAdapters">
+          <Name>Direct Access Server Hosts Network Adapters</Name>
+          <Description>Direct Access Server Hosts Network Adapters</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.NetworkLocationServer">
+          <Name>Direct Access Server Hosts Network Location Server</Name>
+          <Description>Direct Access Server Hosts Network Location Server</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.NetworkSecurity">
+          <Name>Direct Access Server Hosts Network Security</Name>
+          <Description>Direct Access Server Hosts Network Security</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.Otp">
+          <Name>Direct Access Server Hosts Otp</Name>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.Services">
+          <Name>Direct Access Server Hosts Services</Name>
+          <Description>Direct Access Server Hosts Services</Description>
+        </DisplayString>
+        <DisplayString ElementID="DirectAccessServer.Hosts.Teredo">
+          <Name>Direct Access Server Hosts Teredo</Name>
+          <Description>Direct Access Server Hosts Teredo</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.6to4" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This class represents the component responsible for translation between IPv6 to v4 to enable direct access for clients connecting over v4 network. If the DirectAccess client is on the Internet Protocol version 4 (IPv4) Internet, is not on the Internet Protocol version 6 (IPv6) Internet, and has a public IPv4 address assigned to a local area network (LAN) or wireless LAN interface, the DirectAccess client attempts to use 6to4 to encapsulate IPv6 traffic sent to the DirectAccess server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.DirectAccessServer" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess is a feature in the Windows 7 and Windows Server 2008 R2 operating systems that gives users the experience of being seamlessly connected to their corporate network any time they have Internet access. DirectAccess has been enhanced in Windows Server 2012 and Windows Server 2012 R2 and is now available in Remote Access server role.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.DNS" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This class represents Domain Name System (DNS) infrastructure that is configured for DirectAccess.�</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.DNS64" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess can be configured to allow clients to connect to IPv4-only resources on the intranet by using the integrated NAT64 and DNS64 functionality on the RemoteAccess Server. NAT64 is used in combination with DNS64. DNS64 intercepts DNS queries and modifies the replies, so that requests for the name of a computer have their IPv4 address answers converted into the appropriate IPv6 address answers that direct clients to the IPv6 address for the computer on the NAT64.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.DomainController" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess clients, DirectAccess servers, and selected servers must be members of an Active Directory Domain Services (AD DS) domain. DirectAccess also uses Active Directory security groups and Group Policy objects (GPOs) to identify sets of computers and the sets of settings that are applied to them.</maml:para>
+              <maml:para>This class represents the set of Domain Controllers which are configured for DirectAccess.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.HighAvailability" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>One of the most important�enhancements in DirectAccess is a fully high available direct access solution. In Windows Server 2012, Direct Access has� built-in Windows Network Load Balancing support to achieve high availability and scalability. And this configuration can be configured within new deployment wizard interface with a couple of clicks.</maml:para>
+              <maml:para>This class represents the loadbalancing support in DirectAccess and is discovered only when NLB is enabled..</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.IPHTTPS" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>When the Remote Access Services setup Getting Started Wizard or Remote Access Setup Wizard is run, it will check the status of network interfaces on the server to determine if the DirectAccess server is located behind a NAT device. In this configuration, only IP over HTTPS (IP-HTTPS) will be deployed. The IP-HTTPS protocol is an IPv6 transition technology that allows for a secure IP tunnel to be established using a secure HTTP connection.</maml:para>
+              <maml:para>This class is an abstraction of the transition technology.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.IPSec" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess uses Internet Protocol security (IPsec) to protect communications over Internet Protocol (IP) networks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.ISATAP" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Direct Access feature relies on IPv6 network infrastructure. For those who have not a native IPv6 network infrastructure, ISATAP can be used to make intranet servers and applications reachable by tunneling IPv6 traffic over your IPv4-only intranet. Computers running Windows 7 or Windows Server 2008 R2 support ISATAP host functionality.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.Kerberos" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess use an HTTPS based Kerberos proxy for client authorization. Client authentication requests are sent to a Kerberos proxy service running on the DirectAccess server. The Kerberos proxy then sends Kerberos requests to Domain Controllers on behalf of the client.</maml:para>
+              <maml:para>This way, Windows Server 2012 R2 DirectAccess makes PKI deployment optional and simplifies configuration and management..</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.ManagementServers" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This refers to the infrastructure servers used for remote client management.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.MicrosoftRemoteAccess" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Remote Access role in Windows Server 2012 R2 combines the DirectAccess feature and the RRAS role service. The Remote Access server role allows for centralized administration, configuration, and monitoring of both DirectAccess and VPN-based remote access services.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.NAT64" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess can be configured to allow clients to connect to IPv4-only resources on the intranet by using the integrated NAT64 and DNS64 functionality on the RemoteAccess Server. DirectAccess requires end-to-end IPv6 communication between DirectAccess clients and the internal resources that they connect to on the intranet. Many resources are not directly accessible over IPv6, including computers that are not capable of running IPv6, or computers with services that are not IPv6-aware (for example, a server that only supports IPv4, or a Windows 2003 server which is IPv6-capable but has services that are not IPv6-aware). When you need to connect to IPv4-only resources on your intranet, you can use the integrated NAT64 and DNS64 functionality on the RemoteAccess server. NAT64 takes IPv6 traffic on one side and converts it into IPv4 traffic on the other side. The address conversion and conversation handling operate in a similar way to a traditional IPv4 NAT device. On the DirectAccess server, NAT64 is used in combination with DNS64. DNS64 intercepts DNS queries and modifies the replies, so that requests for the name of a computer have their IPv4 address answers converted into the appropriate IPv6 address answers that direct clients to the IPv6 address for the computer on the NAT64.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.NetworkLocationServer" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Network Location Server is used to ascertain whether the user is inside or outside the corpnet. The Network Location Server used for inside/outside detection must be highly available to prevent major outages for DirectAccess clients connected to the intranet. The NLS can be on the DirectAccess server or another highly available server.</maml:para>
+              <maml:para />
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.Otp" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>To increase login security, many organizations have deployed One-Time Password (OTP) two-factor authentication, and mandate its use for remote access connections.</maml:para>
+              <maml:para>Windows Server 2012 R2 DirectAccess supports two-factor authentication with Smart Cards or OTP token based solutions. This feature requires a PKI deployment, so if the option is selected in the DirectAccess Setup Wizard, the�Use computer certificates�option is automatically selected and enforced.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.RemoteAccessServer" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This represents a Window Server 2012 R2 box with Direct Access and RRAS combined within a new unified server role.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.RemoteAccessSite" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DirectAccess servers can be deployed in multiple sites to increase capacity and provide more efficient access to the nearest entry point for intranet resources.�</maml:para>
+              <maml:para>Windows Server 2012 R2 Remote Access servers can be configured in a multisite deployment that allows remote users in dispersed geographical locations to connect to the multisite entry point closest to them. For client computers running Windows Server 2012 R2, entry points can be assigned automatically, or selected manually by the client. For Windows 7 client computers, entry points can be allocated statically. Traffic across the multisite deployment can be distributed and balanced with an external global load balancer.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.Services" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>This represents the basic services like BFE and IPHelper required for Remote Access</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        <KnowledgeArticle ElementID="AP.Remote.Access.Class.Teredo" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The Teredo IPv6 transition technology is used typically when the client system is assigned a private IP address (and for modern Windows clients, will be used when the client is assigned a public IP address and 6to4 isn�t available)</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

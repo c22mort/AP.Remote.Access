@@ -1,0 +1,359 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS64_HEURISTIC_DISABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_DISABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_DISABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns64</ComponentName>
+          <HeuristicId>2147876865</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS64_HEURISTIC_RESOLUTION_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_RESOLUTION_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_RESOLUTION_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns64</ComponentName>
+          <HeuristicId>2147876866</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS64_HEURISTIC_TRANSLATION_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_TRANSLATION_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_TRANSLATION_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns64</ComponentName>
+          <HeuristicId>2147876867</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DNS64" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_DNS64_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_DNS64_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Dns64</ComponentName>
+          <HeuristicId>2147876864</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- DNS 64 Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS64.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS64" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS64.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS64" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS64.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS64" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.DNS64.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.DNS64" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+    
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+      
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE">
+          <Name>Dns64 Disabled</Name>
+          <Description>DNS64 is disabled on the server. DNS64 provides access to IPv4-only servers in the corporate network.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE" SubElementID="DA_DNS64_HEURISTIC_DISABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE" SubElementID="DA_DNS64_HEURISTIC_DISABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE" SubElementID="DA_DNS64_HEURISTIC_DISABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE_AlertMessageResourceID">
+          <Name>Dns64 disabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION">
+          <Name>DNS name resolution for IPv4 Servers</Name>
+          <Description>DNS name resolution for IPv4 servers failed. Direct Access clients might not be able to access IPv4-only servers in the corporate network.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION" SubElementID="DA_DNS64_HEURISTIC_RESOLUTION_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION" SubElementID="DA_DNS64_HEURISTIC_RESOLUTION_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION" SubElementID="DA_DNS64_HEURISTIC_RESOLUTION_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION_AlertMessageResourceID">
+          <Name>Dns64 name resolution</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION">
+          <Name>Dns64 translation failed</Name>
+          <Description>Dns64 translation failed</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION" SubElementID="DA_DNS64_HEURISTIC_TRANSLATION_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION" SubElementID="DA_DNS64_HEURISTIC_TRANSLATION_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION" SubElementID="DA_DNS64_HEURISTIC_TRANSLATION_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION_AlertMessageResourceID">
+          <Name>Dns64 translation failed</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN">
+          <Name>Dns64 unknown error</Name>
+          <Description>Unknown error with Dns64</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN" SubElementID="DA_DNS64_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN" SubElementID="DA_DNS64_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN" SubElementID="DA_DNS64_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Dns64 Unknown Error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- DNS 64 Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS64.AvailabilityRollup">
+          <Name>Direct Access Server from DNS64 Availability Health Rollup</Name>
+          <Description>Direct Access Server from DNS64 Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS64.ConfigurationRollup">
+          <Name>Direct Access Server from DNS64 Configuration Health Rollup</Name>
+          <Description>Direct Access Server from DNS64 Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS64.PerformanceRollup">
+          <Name>Direct Access Server from DNS64 Performance Health Rollup</Name>
+          <Description>Direct Access Server from DNS64 Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.DNS64.SecurityRollup">
+          <Name>Direct Access Server from DNS64 Security Health Rollup</Name>
+          <Description>Direct Access Server from DNS64 Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_DISABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DNS64 is disabled on the server. DNS64 provides access to IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>DNS64 is not enabled on the server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that DNS64 is enabled on the server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_RESOLUTION" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DNS name resolution for IPv4 servers failed. DirectAccess clients might not be able to access IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. DNS64 is not enabled on the server.</maml:para>
+              <maml:para>2. The DNS64 server is unavailable.</maml:para>
+              <maml:para>3. Web probe addresses cannot be reached.</maml:para>
+              <maml:para>4. Corporate DNS servers are unable to resolve the web probe addresses.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that DNS64 is enabled on the server.</maml:para>
+              <maml:para>2. For native IPv6 connectivity, ensure that the NAT64/DNS64 prefix is configured in the DirectAccess settings.</maml:para>
+              <maml:para>3. In the Remote Access Server Setup Wizard, ensure that the default NRPT entry points to the internal address of the NAT64/DNS64 server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_TRANSLATION" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>DNS name resolution for IPv4 servers failed. DirectAccess clients might not be able to access IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>DNS64 name resolution failed.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that DNS64 is enabled on the server.</maml:para>
+              <maml:para>2. Ensure that DNS64 name resolution is enabled on the server.</maml:para>
+              <maml:para>3. For native IPv6 connectivity, ensure that the NAT64/DNS64 prefix is configured in the DirectAccess settings.</maml:para>
+              <maml:para>4. In the Remote Access Server Setup Wizard, ensure that the default NRPT entry points to the internal address of the NAT64/DNS64 server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_DNS_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_DNS64_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown DNS name resolution for IPv4 servers. DirectAccess clients might not be able to access IPv4-only servers in the corporate network.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. DNS64 is not enabled on the server.</maml:para>
+              <maml:para>2. The DNS64 server is unavailable.</maml:para>
+              <maml:para>3. Web probe addresses cannot be reached.</maml:para>
+              <maml:para>4. Corporate DNS servers are unable to resolve the web probe addresses.</maml:para>
+              <maml:para>5. DNS64 name resolution failed.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that DNS64 is enabled on the server.</maml:para>
+              <maml:para>2. Ensure that DNS64 name resolution is enabled on the server.</maml:para>
+              <maml:para>3. For native IPv6 connectivity, ensure that the NAT64/DNS64 prefix is configured in the DirectAccess settings.</maml:para>
+              <maml:para>4. In the Remote Access Server Setup Wizard, ensure that the default NRPT entry points to the internal address of the NAT64/DNS64 server.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    
+    </LanguagePack>    
+  </LanguagePacks>
+</ManagementPackFragment>

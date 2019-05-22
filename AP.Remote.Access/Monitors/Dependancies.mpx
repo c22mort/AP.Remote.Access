@@ -1,0 +1,111 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <DependencyMonitor ID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.MicrosoftRemoteAccess" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="MicrosoftRemoteAccess.Contains.RemoteAccessSite" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.MicrosoftRemoteAccess" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="MicrosoftRemoteAccess.Contains.RemoteAccessSite" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.MicrosoftRemoteAccess" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="MicrosoftRemoteAccess.Contains.RemoteAccessSite" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.MicrosoftRemoteAccess" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="MicrosoftRemoteAccess.Contains.RemoteAccessSite" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.DirectAccessServer" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.DirectAccessServer" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.DirectAccessServer" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessServer.Hosts.DirectAccessServer" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessSite" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessSite.Contains.RemoteAccessServer" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessSite" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessSite.Contains.RemoteAccessServer" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessSite" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessSite.Contains.RemoteAccessServer" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.RemoteAccessSite" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="RemoteAccessSite.Contains.RemoteAccessServer" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+    </Monitors>
+  </Monitoring>
+  
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.AvailabilityRollup">
+          <Name>Remote Access Server from Direct Access Server Availability Health Rollup</Name>
+          <Description>Remote Access Server from Direct Access Server Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.ConfigurationRollup">
+          <Name>Remote Access Server from Direct Access Server Configuration Health Rollup</Name>
+          <Description>Remote Access Server from Direct Access Server Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.PerformanceRollup">
+          <Name>Remote Access Server from Direct Access Server Performance Health Rollup</Name>
+          <Description>Remote Access Server from Direct Access Server Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessServer.DirectAccessServer.SecurityRollup">
+          <Name>Remote Access Server from Direct Access Server Security Health Rollup</Name>
+          <Description>Remote Access Server from Direct Access Server Security Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.AvailabilityRollup">
+          <Name>Remote Access Site from Remote Access Server Availability Health Rollup</Name>
+          <Description>Remote Access Site from Remote Access Server Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.ConfigurationRollup">
+          <Name>Remote Access Site from Remote Access Server Configuration Health Rollup</Name>
+          <Description>Remote Access Site from Remote Access Server Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.PerformanceRollup">
+          <Name>Remote Access Site from Remote Access Server Performance Health Rollup</Name>
+          <Description>Remote Access Site from Remote Access Server Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.RemoteAccessSite.RemoteAccessServer.SecurityRollup">
+          <Name>Remote Access Site from Remote Access Server Security Health Rollup</Name>
+          <Description>Remote Access Site from Remote Access Server Security Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.AvailabilityRollup">
+          <Name>Microsoft Remote Access from Remote Access Site Availability Health Rollup</Name>
+          <Description>Microsoft Remote Access from Remote Access Site Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.ConfigurationRollup">
+          <Name>Microsoft Remote Access from Remote Access Site Configuration Health Rollup</Name>
+          <Description>Microsoft Remote Access from Remote Access Site Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.PerformanceRollup">
+          <Name>Microsoft Remote Access from Remote Access Site Performance Health Rollup</Name>
+          <Description>Microsoft Remote Access from Remote Access Site Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.MicrosoftRemoteAccess.RemoteAccessSite.SecurityRollup">
+          <Name>Microsoft Remote Access from Remote Access Site Security Health Rollup</Name>
+          <Description>Microsoft Remote Access from Remote Access Site Security Health Rollup</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

@@ -1,0 +1,318 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TypeDefinitions>
+    <ModuleTypes>
+
+      <!-- DATASOURCES -->
+      <!-- AP.Remote.Access.DataSource.RAHealthPSDS -->
+      <DataSourceModuleType ID="AP.Remote.Access.DataSource.RAHealthPSDS" Accessibility="Public" Batching="false">
+        <Configuration>
+          <xsd:element minOccurs="1" name="Interval" type="xsd:integer" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element minOccurs="1" name="SyncTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element minOccurs="1" name="Debug" type="xsd:boolean"/>
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="Interval" Selector="$Config/Interval$" ParameterType="int" />
+          <OverrideableParameter ID="SyncTime" Selector="$Config/SyncTime$" ParameterType="string" />
+          <OverrideableParameter ID="Debug" Selector="$Config/Debug$" ParameterType="bool" />
+        </OverrideableParameters>
+        <ModuleImplementation Isolation="Any">
+          <Composite>
+            <MemberModules>
+              <DataSource ID="scheduler" TypeID="System!System.Scheduler">
+                <Scheduler>
+                  <SimpleReccuringSchedule>
+                    <Interval>$Config/Interval$</Interval>
+                    <SyncTime>$Config/SyncTime$</SyncTime>
+                  </SimpleReccuringSchedule>
+                  <ExcludeDates />
+                </Scheduler>
+              </DataSource>
+              <ProbeAction ID="probe" TypeID="AP.Remote.Access.ProbeAction.GetRAHealthProbe">
+                <Debug>$Config/Debug$</Debug>
+              </ProbeAction>
+            </MemberModules>
+            <Composition>
+              <Node ID="probe">
+                <Node ID="scheduler" />
+              </Node>
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>System!System.PropertyBagData</OutputType>
+      </DataSourceModuleType>
+
+      <!-- PROBES -->
+      <!-- AP.Remote.Access.ProbeAction.GetRAHealthProbe -->
+      <ProbeActionModuleType ID="AP.Remote.Access.ProbeAction.GetRAHealthProbe" Accessibility="Public" Batching="false">
+        <Configuration>
+          <IncludeSchemaTypes>
+            <SchemaType>Windows!Microsoft.Windows.PowerShellSchema</SchemaType>
+          </IncludeSchemaTypes>
+          <xsd:element minOccurs="1" name="Debug" type="xsd:string"/>
+        </Configuration>
+        <ModuleImplementation Isolation="OwnProcess">
+          <Composite>
+            <MemberModules>
+              <ProbeAction ID="PSScript" TypeID="Windows!Microsoft.Windows.PowerShellPropertyBagTriggerOnlyProbe">
+                <ScriptName>Get-RemoteAccessHealthInfo.ps1</ScriptName>
+                <ScriptBody>$IncludeFileContent/Scripts/Get-RemoteAccessHealthInfo.ps1$</ScriptBody>
+                <SnapIns />
+                <Parameters>
+                  <Parameter>
+                    <Name>debug</Name>
+                    <Value>$Config/Debug$</Value>
+                  </Parameter>
+                </Parameters>
+                <TimeoutSeconds>60</TimeoutSeconds>
+              </ProbeAction>
+            </MemberModules>
+            <Composition>
+              <Node ID="PSScript" />
+            </Composition>
+          </Composite>
+        </ModuleImplementation>
+        <OutputType>System!System.PropertyBagData</OutputType>
+        <TriggerOnly>true</TriggerOnly>
+      </ProbeActionModuleType>
+      
+    </ModuleTypes>
+
+    <MonitorTypes>
+
+      <!-- AP.Remote.Access.Monitor.HeuristicMonitorType -->
+      <UnitMonitorType ID="AP.Remote.Access.Monitor.HeuristicMonitorType" Accessibility="Public">
+        <MonitorTypeStates>
+          <MonitorTypeState ID="Error" NoDetection="false" />
+          <MonitorTypeState ID="Warning" NoDetection="false" />
+          <MonitorTypeState ID="Healthy" NoDetection="false" />
+        </MonitorTypeStates>
+        <Configuration>
+          <xsd:element minOccurs="1" name="Interval" type="xsd:integer" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element minOccurs="1" name="SyncTime" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element minOccurs="1" name="ComponentName" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element minOccurs="1" name="HeuristicId" type="xsd:string" xmlns:xsd="http://www.w3.org/2001/XMLSchema" />
+          <xsd:element minOccurs="1" name="Debug" type="xsd:boolean"/>
+        </Configuration>
+        <OverrideableParameters>
+          <OverrideableParameter ID="Interval" Selector="$Config/Interval$" ParameterType="int" />
+          <OverrideableParameter ID="SyncTime" Selector="$Config/SyncTime$" ParameterType="string" />
+          <OverrideableParameter ID="ComponentName" Selector="$Config/ComponentName$" ParameterType="string" />
+          <OverrideableParameter ID="HeuristicId" Selector="$Config/HeuristicId$" ParameterType="string" />
+        </OverrideableParameters>
+        <MonitorImplementation>
+          <MemberModules>
+            <DataSource ID="RemoteAccessDS" TypeID="AP.Remote.Access.DataSource.RAHealthPSDS">
+              <Interval>$Config/Interval$</Interval>
+              <SyncTime>$Config/SyncTime$</SyncTime>
+              <Debug>$Config/Debug$</Debug>
+            </DataSource>
+            <ProbeAction ID="Script" TypeID="AP.Remote.Access.ProbeAction.GetRAHealthProbe">
+              <Debug>$Config/Debug$</Debug>
+            </ProbeAction>
+            <ProbeAction ID="PassThrough" TypeID="System!System.PassThroughProbe" />
+            <ConditionDetection ID="ErrorExpression" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <And>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='ID']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">$Config/HeuristicId$</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='Component']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">$Config/ComponentName$</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='State']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">Error</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                </And>
+              </Expression>
+            </ConditionDetection>
+            <ConditionDetection ID="WarningExpression" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <And>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='ID']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">$Config/HeuristicId$</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='Component']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">$Config/ComponentName$</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='State']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">Warning</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                </And>
+              </Expression>
+            </ConditionDetection>
+            <ConditionDetection ID="HealthyExpression" TypeID="System!System.ExpressionFilter">
+              <Expression>
+                <And>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='Component']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">$Config/ComponentName$</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                  <Expression>
+                    <SimpleExpression>
+                      <ValueExpression>
+                        <XPathQuery Type="String">Property[@Name='State']</XPathQuery>
+                      </ValueExpression>
+                      <Operator>Equal</Operator>
+                      <ValueExpression>
+                        <Value Type="String">OK</Value>
+                      </ValueExpression>
+                    </SimpleExpression>
+                  </Expression>
+                </And>
+              </Expression>
+            </ConditionDetection>
+          </MemberModules>
+          <RegularDetections>
+            <RegularDetection MonitorTypeStateID="Error">
+              <Node ID="ErrorExpression">
+                <Node ID="RemoteAccessDS" />
+              </Node>
+            </RegularDetection>
+            <RegularDetection MonitorTypeStateID="Warning">
+              <Node ID="WarningExpression">
+                <Node ID="RemoteAccessDS" />
+              </Node>
+            </RegularDetection>
+            <RegularDetection MonitorTypeStateID="Healthy">
+              <Node ID="HealthyExpression">
+                <Node ID="RemoteAccessDS" />
+              </Node>
+            </RegularDetection>
+          </RegularDetections>
+          <OnDemandDetections>
+            <OnDemandDetection MonitorTypeStateID="Error">
+              <Node ID="ErrorExpression">
+                <Node ID="Script">
+                  <Node ID="PassThrough" />
+                </Node>
+              </Node>
+            </OnDemandDetection>
+            <OnDemandDetection MonitorTypeStateID="Warning">
+              <Node ID="WarningExpression">
+                <Node ID="Script">
+                  <Node ID="PassThrough" />
+                </Node>
+              </Node>
+            </OnDemandDetection>
+            <OnDemandDetection MonitorTypeStateID="Healthy">
+              <Node ID="HealthyExpression">
+                <Node ID="Script">
+                  <Node ID="PassThrough" />
+                </Node>
+              </Node>
+            </OnDemandDetection>
+          </OnDemandDetections>
+        </MonitorImplementation>
+      </UnitMonitorType>
+    </MonitorTypes>
+
+  </TypeDefinitions>
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.HeuristicMonitorType -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.HeuristicMonitorType">
+          <Name>Remote Accesss Heuristic Monitor</Name>
+          <Description>Remote Accesss Heuristic Monitor</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.HeuristicMonitorType" SubElementID="SyncTime">
+          <Name>Synchronisation Time</Name>
+          <Description>Offset that this module is started from.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.HeuristicMonitorType" SubElementID="Interval">
+          <Name>Interval Seconds</Name>
+          <Description>Frequency in seconds that module is run.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.HeuristicMonitorType" SubElementID="ComponentName">
+          <Name>Component Name</Name>
+          <Description>Name of Remote Access Component to Test.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.HeuristicMonitorType" SubElementID="HeuristicId">
+          <Name>Heuristic ID</Name>
+          <Description>Heuristic Id of Element to Test.</Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.ProbeAction.GetRAHealthProbe -->
+        <DisplayString ElementID="AP.Remote.Access.ProbeAction.GetRAHealthProbe">
+          <Name>Remote Access Health State Powershell Probe</Name>
+          <Description>Runs Get-RemoteAccessHealth via Powershell</Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.DataSource.RAHealthPSDS -->
+        <DisplayString ElementID="AP.Remote.Access.DataSource.RAHealthPSDS">
+          <Name>Remote Access Health Powershell Datasource</Name>
+          <Description>Remote Access Health Powershell Datasource.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DataSource.RAHealthPSDS" SubElementID="Debug">
+          <Name>Debug</Name>
+          <Description>If true, writes additional info to Operational Manager Log</Description>         
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DataSource.RAHealthPSDS" SubElementID="Interval">
+          <Name>Interval Seconds</Name>
+          <Description>Frequency in seconds that module is run.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DataSource.RAHealthPSDS" SubElementID="SyncTime">
+          <Name>Synchronisation Time</Name>
+          <Description>Offset that this module is started from.</Description>
+        </DisplayString>
+      </DisplayStrings>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

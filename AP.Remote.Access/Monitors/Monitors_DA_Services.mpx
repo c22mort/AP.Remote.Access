@@ -1,0 +1,282 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Services" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_SVC_HEURISTIC_RUNNING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_SVC_HEURISTIC_RUNNING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_SVC_HEURISTIC_RUNNING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Services</ComponentName>
+          <HeuristicId>3221225473</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Services" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_SVC_HEURISTIC_TASK_STATE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_SVC_HEURISTIC_TASK_STATE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_SVC_HEURISTIC_TASK_STATE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Services</ComponentName>
+          <HeuristicId>3221225474</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Services" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="RA_SVC_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="RA_SVC_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="RA_SVC_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Services</ComponentName>
+          <HeuristicId>3221225472</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- Services Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Services.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Services" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Services.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Services" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Services.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Services" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Services.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Services" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING">
+          <Name>Service availability</Name>
+          <Description>Check if the services required for proper functioning of the server are running</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING" SubElementID="RA_SVC_HEURISTIC_RUNNING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING" SubElementID="RA_SVC_HEURISTIC_RUNNING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING" SubElementID="RA_SVC_HEURISTIC_RUNNING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING_AlertMessageResourceID">
+          <Name>Services unavailable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE">
+          <Name>Server Configuration </Name>
+          <Description>Remote Access failed to apply server specific settings.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE" SubElementID="RA_SVC_HEURISTIC_TASK_STATE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE" SubElementID="RA_SVC_HEURISTIC_TASK_STATE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE" SubElementID="RA_SVC_HEURISTIC_TASK_STATE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE_AlertMessageResourceID">
+          <Name>Failed to apply server settings</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN">
+          <Name>Services unknown error</Name>
+          <Description>An error occured with the services essential to running DA</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN" SubElementID="RA_SVC_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN" SubElementID="RA_SVC_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN" SubElementID="RA_SVC_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Services unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- Services Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Services.AvailabilityRollup">
+          <Name>Direct Access Server from Services Availability Health Rollup</Name>
+          <Description>Direct Access Server from Services Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Services.ConfigurationRollup">
+          <Name>Direct Access Server from Services Configuration Health Rollup</Name>
+          <Description>Direct Access Server from Services Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Services.PerformanceRollup">
+          <Name>Direct Access Server from Services Performance Health Rollup</Name>
+          <Description>Direct Access Server from Services Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Services.SecurityRollup">
+          <Name>Direct Access Server from Services Security Health Rollup</Name>
+          <Description>Direct Access Server from Services Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+    
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_RUNNING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>System services required for the server to function properly are not running.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>System services required for the server to function properly have either been stopped or are not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Enable (Start-Service Service-Name) or restart (Restart-Service Service-Name) the services from an elevated Windows PowerShell prompt.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_TASK_STATE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Remote Access failed to apply server specific settings.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Remote access server-specific settings cannot be applied due to an internal error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>From an elevated command prompt, run the following command: </maml:para>
+              <maml:para>gpupdate /force </maml:para>
+              <maml:para>This will force application of the server settings.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.RA_SVC_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown system services error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. System services required for the server to function properly have either been stopped or are not responding.</maml:para>
+              <maml:para>2. Remote access server-specific settings cannot be applied due to an internal error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Enable (Start-Service Service-Name) or restart (Restart-Service Service-Name) the services from an elevated Windows PowerShell prompt.</maml:para>
+              <maml:para>2. From an elevated command prompt, run the following command: </maml:para>
+              <maml:para>3. gpupdate /force (This will force application of the server settings.)</maml:para>
+          </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+      
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

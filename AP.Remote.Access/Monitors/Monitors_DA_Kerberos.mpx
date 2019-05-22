@@ -1,0 +1,517 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Kerberos" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_KERB_HEURISTIC_AUTH_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_KERB_HEURISTIC_AUTH_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_KERB_HEURISTIC_AUTH_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Kerberos</ComponentName>
+          <HeuristicId>2148139010</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Kerberos" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_KERB_HEURISTIC_KERB_DOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_KERB_HEURISTIC_KERB_DOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_KERB_HEURISTIC_KERB_DOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Kerberos</ComponentName>
+          <HeuristicId>2148139009</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Kerberos" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_KERB_HEURISTIC_CERT_BINDING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_KERB_HEURISTIC_CERT_BINDING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_KERB_HEURISTIC_CERT_BINDING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Kerberos</ComponentName>
+          <HeuristicId>2148139013</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Kerberos" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_KERB_HEURISTIC_INVALID_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_KERB_HEURISTIC_INVALID_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_KERB_HEURISTIC_INVALID_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Kerberos</ComponentName>
+          <HeuristicId>2148139011</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Kerberos" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_KERB_HEURISTIC_MISSING_CERT_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_KERB_HEURISTIC_MISSING_CERT_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_KERB_HEURISTIC_MISSING_CERT_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Kerberos</ComponentName>
+          <HeuristicId>2148139012</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.Kerberos" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_KERB_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_KERB_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_KERB_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Kerberos</ComponentName>
+          <HeuristicId>2148139008</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- Kerberos Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Kerberos.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Kerberos" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Kerberos.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Kerberos" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Kerberos.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Kerberos" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.Kerberos.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.Kerberos" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH">
+          <Name>Kerberos Authentication Blocked</Name>
+          <Description>
+            Ports required for Kerberos authentication are blocked. Kerberos authentication is required to authenticate clients using Kerberos proxy on this server. \
+            For clients to communicate with the proxy, firewalls must allow HTTPS traffic (port 443 by default). The Kerberos proxy must be able to send Kerberos authentication protocol traffic via port 88, and Kerberos change password protocol traffic via port 464 to domain controllers.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH" SubElementID="DA_KERB_HEURISTIC_AUTH_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH" SubElementID="DA_KERB_HEURISTIC_AUTH_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH" SubElementID="DA_KERB_HEURISTIC_AUTH_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH_AlertMessageResourceID">
+          <Name>Kerberos authentication blocked</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING">
+          <Name>Kerberos certificate binding</Name>
+          <Description>
+            The certificate binding for HTTPS Port 443 has changed. This certificate is used to authenticate remote clients with Kerberos. Without the correct certificate,
+            authentication of remote clients connecting via DirectAccess will not work as expected.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING" SubElementID="DA_KERB_HEURISTIC_CERT_BINDING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING" SubElementID="DA_KERB_HEURISTIC_CERT_BINDING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING" SubElementID="DA_KERB_HEURISTIC_CERT_BINDING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING_AlertMessageResourceID">
+          <Name>Kerberos cert binding has changed</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT">
+          <Name>Kerberos Certificate Invalid</Name>
+          <Description>The certificate used for Kerberos authentication is not valid.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT" SubElementID="DA_KERB_HEURISTIC_INVALID_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT" SubElementID="DA_KERB_HEURISTIC_INVALID_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT" SubElementID="DA_KERB_HEURISTIC_INVALID_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT_AlertMessageResourceID">
+          <Name>Kerberos cert invalid</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN">
+          <Name>KDC Proxy Server (kpssvc) service state</Name>
+          <Description>
+            A network authentication service (kpssvc) is not available.  This service helps in authenticating DirectAccess clients when they connect to the
+            corporate network via DirectAccess.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN" SubElementID="DA_KERB_HEURISTIC_KERB_DOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN" SubElementID="DA_KERB_HEURISTIC_KERB_DOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN" SubElementID="DA_KERB_HEURISTIC_KERB_DOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN_AlertMessageResourceID">
+          <Name>Kpssvc service not available</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT">
+          <Name>Kerberos certificate missing</Name>
+          <Description>The certificate used for Kerberos authentication is missing.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT" SubElementID="DA_KERB_HEURISTIC_MISSING_CERT_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT" SubElementID="DA_KERB_HEURISTIC_MISSING_CERT_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT" SubElementID="DA_KERB_HEURISTIC_MISSING_CERT_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT_AlertMessageResourceID">
+          <Name>Kerberos cert missing</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN">
+          <Name>Kerberos unkown error</Name>
+          <Description>Kerberos unkown error</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN" SubElementID="DA_KERB_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN" SubElementID="DA_KERB_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN" SubElementID="DA_KERB_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Kerberos uknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- Kerberos Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Kerberos.AvailabilityRollup">
+          <Name>Direct Access Server from Kerberos Availability Health Rollup</Name>
+          <Description>Direct Access Server from Kerberos Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Kerberos.ConfigurationRollup">
+          <Name>Direct Access Server from Kerberos Configuration Health Rollup</Name>
+          <Description>Direct Access Server from Kerberos Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Kerberos.PerformanceRollup">
+          <Name>Direct Access Server from Kerberos Performance Health Rollup</Name>
+          <Description>Direct Access Server from Kerberos Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.Kerberos.SecurityRollup">
+          <Name>Direct Access Server from Kerberos Security Health Rollup</Name>
+          <Description>Direct Access Server from Kerberos Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_KERB_DOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>A network authentication service (kpssvc) is not available.  This service helps in authenticating DirectAccess clients when they connect to the corporate network via DirectAccess.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The kpssvc service was stopped.</maml:para>
+              <maml:para>2. The service stopped responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>The service will start automatically, or it can be restarted manually.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_AUTH" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Ports required for Kerberos authentication are blocked. Kerberos authentication is required to authenticate clients using Kerberos proxy on this server. For clients to communicate with the proxy, firewalls must allow HTTPS traffic (port 443 by default). The Kerberos proxy must be able to send Kerberos authentication protocol traffic via port 88, and Kerberos change password protocol traffic via port 464 to domain controllers.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. Port 443 or the HTTPS protocol is blocked on the Remote Access server.</maml:para>
+              <maml:para>2. Port 88 or 464 is blocked on the Remote Access server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that port 443 and the HTTPS protocol are not blocked.</maml:para>
+              <maml:para>2. Ensure that Port 88 and port 464 is not blocked on the Remote Access server, or on domain controllers.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_INVALID_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Ports required for Kerberos authentication are blocked. Kerberos authentication is required to authenticate clients using Kerberos proxy on this server. For clients to communicate with the proxy, firewalls must allow HTTPS traffic (port 443 by default). The Kerberos proxy must be able to send Kerberos authentication protocol traffic via port 88, and Kerberos change password protocol traffic via port 464 to domain controllers.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has expired.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that the certificate is not expired.</maml:para>
+              <maml:para>2. Renew the expired certificate.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_MISSING_CERT" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The certificate used for Kerberos authentication is missing.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate has been removed from the computer store.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Ensure that a valid certificate exists in the machine store.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_CERT_BINDING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The certificate binding for HTTPS Port 443 has changed. This certificate is used to authenticate remote clients with Kerberos. Without the correct certificate, authentication of remote clients connecting via DirectAccess will not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>The certificate binding has been changed by another process or application.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure the certificate binding has not been modified.</maml:para>
+              <maml:para>2. If you bind port 443 with another certificate for use with a different application, ensure that DirectAccess is configured to use the same certificate binding as that application.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_KERB_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown Kerberos Error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. The certificate has been removed from the computer store.</maml:para>
+              <maml:para>2. The certificate has expired.</maml:para>
+              <maml:para>3. The certificate binding has been changed by another process or application.</maml:para>
+              <maml:para>4. Port 443 or the HTTPS protocol is blocked on the Remote Access server.</maml:para>
+              <maml:para>5. Port 88 or 464 is blocked on the Remote Access server.</maml:para>
+              <maml:para>6. The kpssvc service was stopped.</maml:para>
+              <maml:para>7. The service stopped responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that a valid certificate exists in the machine store.</maml:para>
+              <maml:para>2. Ensure that the certificate is not expired.</maml:para>
+              <maml:para>3. Renew the expired certificate.</maml:para>
+              <maml:para>4. Ensure the certificate binding has not been modified.</maml:para>
+              <maml:para>5. If you bind port 443 with another certificate for use with a different application, ensure that DirectAccess is configured to use the same certificate binding as that application.</maml:para>
+              <maml:para>6. Ensure that port 443 and the HTTPS protocol are not blocked.</maml:para>
+              <maml:para>7. Ensure that Port 88 and port 464 is not blocked on the Remote Access server, or on domain controllers.</maml:para>
+              <maml:para>8. The service will start automatically, or it can be restarted manually.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

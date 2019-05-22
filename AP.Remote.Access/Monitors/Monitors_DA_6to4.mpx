@@ -1,0 +1,361 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+      
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.6to4" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_6TO4_HEURISTIC_INTERFACE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_INTERFACE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_INTERFACE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>6to4</ComponentName>
+          <HeuristicId>2147680257</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.6to4" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_6TO4_HEURISTIC_IPHLPSVC_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_IPHLPSVC_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_IPHLPSVC_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>6to4</ComponentName>
+          <HeuristicId>2147680259</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.6to4" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_6TO4_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>6to4</ComponentName>
+          <HeuristicId>2147680256</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.6to4" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_6TO4_HEURISTIC_FORWARDING_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_FORWARDING_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_6TO4_HEURISTIC_FORWARDING_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>6to4</ComponentName>
+          <HeuristicId>2147680258</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- 6to4 Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.6to4.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.6to4" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.6to4.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.6to4" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.6to4.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.6to4" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.6to4.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.6to4" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+  
+  
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+
+      <DisplayStrings>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE">
+          <Name>6to4 Adapter State</Name>
+          <Description>6to4 interface is not working on the Remote Access server.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE" SubElementID="DA_6TO4_HEURISTIC_INTERFACE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE" SubElementID="DA_6TO4_HEURISTIC_INTERFACE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE" SubElementID="DA_6TO4_HEURISTIC_INTERFACE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE_AlertMessageResourceID">
+          <Name>6to4 interface not working</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC">
+          <Name>6to4 - IP Helper State</Name>
+          <Description>The IP Helper service (iphlpsvc) has stopped, and DirectAccess might not work as expected. The IP Helper service provides tunnel connectivity using the connectivity platform, IPv6 transition technologies, and IP-HTTPS.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC" SubElementID="DA_6TO4_HEURISTIC_IPHLPSVC_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC" SubElementID="DA_6TO4_HEURISTIC_IPHLPSVC_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC" SubElementID="DA_6TO4_HEURISTIC_IPHLPSVC_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC_AlertMessageResourceID">
+          <Name>6to4 - IP Helper Service Stopped</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN">
+          <Name>6to4 Unknown Error</Name>
+          <Description>6to4 Unknown Error</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN" SubElementID="DA_6TO4_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN" SubElementID="DA_6TO4_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN" SubElementID="DA_6TO4_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>6to4 Unknown Error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING">
+          <Name>6to4 Forwarding state</Name>
+          <Description>Forwarding is disabled on the 6to4 adapter.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING" SubElementID="DA_6TO4_HEURISTIC_FORWARDING_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING" SubElementID="DA_6TO4_HEURISTIC_FORWARDING_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING" SubElementID="DA_6TO4_HEURISTIC_FORWARDING_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING_AlertMessageResourceID">
+          <Name>6to4 Forwarding Disabled</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- 6to4 Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.6to4.AvailabilityRollup">
+          <Name>Direct Access Server from 6to4 Availability Health Rollup</Name>
+          <Description>Direct Access Server from 6to4 Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.6to4.ConfigurationRollup">
+          <Name>Direct Access Server from 6to4 Configuration Health Rollup</Name>
+          <Description>Direct Access Server from 6to4 Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.6to4.PerformanceRollup">
+          <Name>Direct Access Server from 6to4 Performance Health Rollup</Name>
+          <Description>Direct Access Server from 6to4 Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.6to4.SecurityRollup">
+          <Name>Direct Access Server from 6to4 Security Health Rollup</Name>
+          <Description>Direct Access Server from 6to4 Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_INTERFACE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>6to4 interface is not working on the Remote Access server.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. A global IPv4 address was not detected on the external adapter.</maml:para>
+              <maml:para>2. 6to4 has been disabled.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure there is a global IPv4 address on the external adapter.</maml:para>
+              <maml:para>2. Ensure that 6to4 is enabled.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_IPHLPSVC" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>The IP Helper service (iphlpsvc) has stopped, and DirectAccess might not work as expected. The IP Helper service provides tunnel connectivity using the connectivity platform, IPv6 transition technologies, and IP-HTTPS.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. The IP Helper service (iphlpsvc) has stopped.</maml:para>
+              <maml:para>2. The IP Helper service (iphlpsvc) is not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify that the service is running by typing 'Get-Service iphlpsvc' at a Windows PowerShell command prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service iphlpsvc) or restart (Restart-Service iphlpsvc) the service from an elevated PowerShell prompt.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_FORWARDING" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Forwarding is disabled on the 6to4 adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>Forwarding is disabled on the 6to4 adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>Enable forwarding on the 6to4 adapter.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        
+        <!-- AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_6TO4_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown IPv6to4 Error.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. The IP Helper service (iphlpsvc) has stopped.</maml:para>
+              <maml:para>2. The IP Helper service (iphlpsvc) is not responding.</maml:para>
+              <maml:para>3. A global IPv4 address was not detected on the external adapter.</maml:para>
+              <maml:para>4. 6to4 has been disabled.</maml:para>
+              <maml:para>5. Forwarding is disabled on the 6to4 adapter.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Verify that the service is running by typing 'Get-Service iphlpsvc' at a Windows PowerShell command prompt.</maml:para>
+              <maml:para>2. Enable (Start-Service iphlpsvc) or restart (Restart-Service iphlpsvc) the service from an elevated PowerShell prompt.</maml:para>
+              <maml:para>3. Ensure there is a global IPv4 address on the external adapter.</maml:para>
+              <maml:para>4. Ensure that 6to4 is enabled.</maml:para>
+              <maml:para>5. Enable forwarding on the 6to4 adapter.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+      </KnowledgeArticles>
+    
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>

@@ -1,0 +1,287 @@
+﻿<ManagementPackFragment SchemaVersion="2.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Monitoring>
+    <Monitors>
+
+      <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ManagementServers" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Management Servers</ComponentName>
+          <HeuristicId>2148270082</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ManagementServers" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_AlertMessageResourceID">
+          <AlertOnState>Error</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Management Servers</ComponentName>
+          <HeuristicId>2148270081</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN -->
+      <UnitMonitor ID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.ManagementServers" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" TypeID="AP.Remote.Access.Monitor.HeuristicMonitorType" ConfirmDelivery="true">
+        <Category>Custom</Category>
+        <AlertSettings AlertMessage="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <AlertOnState>Warning</AlertOnState>
+          <AutoResolve>true</AutoResolve>
+          <AlertPriority>Normal</AlertPriority>
+          <AlertSeverity>Error</AlertSeverity>
+          <AlertParameters>
+            <AlertParameter1>$Data/Context/DataItem/Property[@Name='ErrorDesc']$</AlertParameter1>
+            <AlertParameter2>$Data/Context/DataItem/Property[@Name='ErrorCause']$</AlertParameter2>
+            <AlertParameter3>$Data/Context/DataItem/Property[@Name='ErrorResolution']$</AlertParameter3>
+          </AlertParameters>
+        </AlertSettings>
+        <OperationalStates>
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_UNKNOWN_Error" MonitorTypeStateID="Error" HealthState="Error" />
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_UNKNOWN_Warning" MonitorTypeStateID="Warning" HealthState="Warning" />
+          <OperationalState ID="DA_MGMTSRV_HEURISTIC_UNKNOWN_Success" MonitorTypeStateID="Healthy" HealthState="Success" />
+        </OperationalStates>
+        <Configuration>
+          <Interval>300</Interval>
+          <SyncTime />
+          <ComponentName>Management Servers</ComponentName>
+          <HeuristicId>2148270080</HeuristicId>
+          <Debug>false</Debug>
+        </Configuration>
+      </UnitMonitor>
+
+      <!-- Management Servers Roll-Ups -->
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ManagementServers.AvailabilityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.AvailabilityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ManagementServers" MemberMonitor="Health!System.Health.AvailabilityState">
+        <Category>AvailabilityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ManagementServers.ConfigurationRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.ConfigurationState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ManagementServers" MemberMonitor="Health!System.Health.ConfigurationState">
+        <Category>ConfigurationHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ManagementServers.PerformanceRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.PerformanceState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ManagementServers" MemberMonitor="Health!System.Health.PerformanceState">
+        <Category>PerformanceHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+      <DependencyMonitor ID="AP.Remote.Access.DirectAccessServer.ManagementServers.SecurityRollup" Accessibility="Public" Enabled="true" Target="AP.Remote.Access.Class.DirectAccessServer" ParentMonitorID="Health!System.Health.SecurityState" Remotable="true" Priority="Normal" RelationshipType="DirectAccessServer.Hosts.ManagementServers" MemberMonitor="Health!System.Health.SecurityState">
+        <Category>SecurityHealth</Category>
+        <Algorithm>WorstOf</Algorithm>
+      </DependencyMonitor>
+
+    </Monitors>
+  </Monitoring>
+
+  <Presentation>
+    <StringResources>
+
+      <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_AlertMessageResourceID" />
+      <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN -->
+      <StringResource ID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN_AlertMessageResourceID" />
+
+    </StringResources>
+  </Presentation>
+
+  <LanguagePacks>
+    <LanguagePack ID="ENU" IsDefault="true">
+      <DisplayStrings>
+        
+        <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE">
+          <Name>Management Servers Unreachable</Name>
+          <Description>
+            All management servers are unavailable or not responding.
+            Updates required for DirectAccess client compliance might not work as expected.
+          </Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE" SubElementID="DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE" SubElementID="DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE" SubElementID="DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE_AlertMessageResourceID">
+          <Name>Mgmt Servers Unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE">
+          <Name>Some Mgmt Servers Unavailable</Name>
+          <Description>One or more management servers are unavailable or not responding. Updates required for corporate compliance of DirectAccess client computers might not work as expected.</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE" SubElementID="DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE" SubElementID="DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE" SubElementID="DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE_AlertMessageResourceID">
+          <Name>Some Mgmt Servers Unreachable</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN -->
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN">
+          <Name>Management Server unknown error</Name>
+          <Description>An unknown error occured with one of the Management Servers</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN" SubElementID="DA_MGMTSRV_HEURISTIC_UNKNOWN_Error">
+          <Name>Error</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN" SubElementID="DA_MGMTSRV_HEURISTIC_UNKNOWN_Success">
+          <Name>Healthy</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN" SubElementID="DA_MGMTSRV_HEURISTIC_UNKNOWN_Warning">
+          <Name>Warning</Name>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN_AlertMessageResourceID">
+          <Name>Mgmt Server unknown error</Name>
+          <Description>
+            Error Description - {0}
+            Error Cause - {1}
+            Error Resolution - {2}
+          </Description>
+        </DisplayString>
+
+        <!-- Management Servers Roll-Ups -->
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ManagementServers.AvailabilityRollup">
+          <Name>Direct Access Server from Management Servers Availability Health Rollup</Name>
+          <Description>Direct Access Server from Management Servers Availability Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ManagementServers.ConfigurationRollup">
+          <Name>Direct Access Server from Management Servers Configuration Health Rollup</Name>
+          <Description>Direct Access Server from Management Servers Configuration Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ManagementServers.PerformanceRollup">
+          <Name>Direct Access Server from Management Servers Performance Health Rollup</Name>
+          <Description>Direct Access Server from Management Servers Performance Health Rollup</Description>
+        </DisplayString>
+        <DisplayString ElementID="AP.Remote.Access.DirectAccessServer.ManagementServers.SecurityRollup">
+          <Name>Direct Access Server from Management Servers Security Health Rollup</Name>
+          <Description>Direct Access Server from Management Servers Security Health Rollup</Description>
+        </DisplayString>
+
+      </DisplayStrings>
+
+      <KnowledgeArticles>
+
+        <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_SOME_UNREACHABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>One or more management servers are unavailable or not responding. Updates required for corporate compliance of DirectAccess client computers might not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. Management servers cannot be reached.</maml:para>
+              <maml:para>2. Management servers are not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that network connectivity to management servers is working as expected.</maml:para>
+              <maml:para>2. Verify settings for management servers</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_ALL_UNREACHABLE" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>All management servers are unavailable or not responding. Updates required for DirectAccess client compliance might not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Causes</maml:title>
+              <maml:para>1. Management servers cannot be reached.</maml:para>
+              <maml:para>2. Management servers are not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that network connectivity to management servers is working as expected.</maml:para>
+              <maml:para>2. Verify settings for management servers</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+
+        <!-- AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN -->
+        <KnowledgeArticle ElementID="AP.Remote.Access.Monitor.DA_MGMTSRV_HEURISTIC_UNKNOWN" Visible="true">
+          <MamlContent>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Summary</maml:title>
+              <maml:para>Unknown management server Error. Updates required for DirectAccess client compliance might not work as expected.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Possible Causes</maml:title>
+              <maml:para>1. Management servers cannot be reached.</maml:para>
+              <maml:para>2. Management servers are not responding.</maml:para>
+            </maml:section>
+            <maml:section xmlns:maml="http://schemas.microsoft.com/maml/2004/10">
+              <maml:title>Resolutions</maml:title>
+              <maml:para>1. Ensure that network connectivity to management servers is working as expected.</maml:para>
+              <maml:para>2. Verify settings for management servers</maml:para>
+              <maml:para>Note: Operations status is updated in accordance with the configured refresh interval. Clicking Refresh to manually update status does not update the status of the DNS resolution and ICMP reachability checks.</maml:para>
+            </maml:section>
+          </MamlContent>
+        </KnowledgeArticle>
+        
+      </KnowledgeArticles>
+    </LanguagePack>
+  </LanguagePacks>
+</ManagementPackFragment>
